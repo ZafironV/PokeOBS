@@ -4,7 +4,7 @@
 //
 // La X de la ventana la oculta en la bandeja de Windows (junto al reloj): PokeOBS
 // sigue funcionando para OBS. Solo «Salir» del menú de la bandeja la cierra.
-const { app, BrowserWindow, Menu, Tray, clipboard, dialog, ipcMain, nativeImage, shell } = require('electron');
+const { app, BrowserWindow, Menu, Tray, clipboard, dialog, ipcMain, nativeImage, nativeTheme, shell } = require('electron');
 const { spawn } = require('node:child_process');
 const fs = require('node:fs');
 const path = require('node:path');
@@ -116,7 +116,7 @@ function createWindow(show) {
     minHeight: 500,
     show,
     title: 'PokeOBS',
-    backgroundColor: '#17181c',
+    backgroundColor: nativeTheme.shouldUseDarkColors ? '#17181c' : '#f3f4f7',
     autoHideMenuBar: true,
     icon: ICON,
     webPreferences: { contextIsolation: true, sandbox: true, preload: path.join(__dirname, 'preload.cjs') },

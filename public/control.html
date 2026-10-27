@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="/css/card.css" />
     <link rel="stylesheet" href="/css/game.css" />
     <link rel="stylesheet" href="/css/control.css" />
+    <script>
+      // Tema elegido (Sistema, Claro u Oscuro), aplicado antes de pintar para que no parpadee.
+      try {
+        const t = localStorage.getItem('pokeobs.theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch {}
+    </script>
   </head>
   <body>
     <header class="top">
@@ -15,6 +22,11 @@
         <span id="pill-server" class="pill bad" title="Conexión con el servidor local">Servidor: desconectado</span>
         <span id="pill-overlay" class="pill bad" title="Fuentes de navegador conectadas">Overlay: ninguno</span>
         <span id="pill-auto" class="pill off" title="Conexión con RetroArch">RetroArch: apagado</span>
+        <select id="theme-pick" class="theme-pick" aria-label="Tema del panel" title="Tema del panel">
+          <option value="system">Tema: sistema</option>
+          <option value="light">Tema: claro</option>
+          <option value="dark">Tema: oscuro</option>
+        </select>
       </div>
     </header>
 

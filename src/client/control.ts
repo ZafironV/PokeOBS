@@ -542,6 +542,24 @@ const designPanel = initDesignPanel({
 
 const livePreview = initLivePreview({ send: (msg) => socket.send(msg) });
 
+// ---------- tema del panel ----------
+
+{
+  const THEME_KEY = 'pokeobs.theme';
+  const pick = $<HTMLSelectElement>('theme-pick');
+  pick.value = document.documentElement.dataset.theme ?? 'system';
+  pick.addEventListener('change', () => {
+    // «Sistema» quita el atributo: el CSS sigue entonces al tema de Windows.
+    if (pick.value === 'system') delete document.documentElement.dataset.theme;
+    else document.documentElement.dataset.theme = pick.value;
+    try {
+      localStorage.setItem(THEME_KEY, pick.value);
+    } catch {
+      // sin almacenamiento: vale para esta sesión
+    }
+  });
+}
+
 // ---------- aplicación de escritorio ----------
 
 /** Solo existe dentro de la ventana de la aplicación (electron/preload.cjs). */
