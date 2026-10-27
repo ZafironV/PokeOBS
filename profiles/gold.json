@@ -1,0 +1,47 @@
+{
+  "id": "gold",
+  "name": "Pokémon Oro",
+  "shortName": "Oro",
+  "platform": "Game Boy Color",
+  "group": "Johto",
+  "order": 20,
+  "notes": "Pokémon Oro original (Generación II). No es un remake.",
+  "generation": 2,
+  "versionGroup": "gold-silver",
+  "textVersion": "gold",
+  "regionalPokedex": {
+    "name": "original-johto",
+    "label": "Pokédex de Johto (original, 251)",
+    "short": "Johto"
+  },
+  "nationalDex": {
+    "maxSpecies": 251,
+    "label": "Pokédex Nacional (hasta Gen. II: 251 especies)"
+  },
+  "sprites": {
+    "game": [
+      {
+        "path": "versions.generation-ii.gold.front_transparent",
+        "label": "Oro (Game Boy Color)"
+      }
+    ],
+    "animated": [
+      {
+        "path": "versions.generation-v.black-white.animated.front_default",
+        "label": "Animación pixel art de Negro/Blanco (no es de Oro)",
+        "fromOtherGame": true,
+        "animated": true
+      }
+    ],
+    "family": [
+      {
+        "path": "versions.generation-ii.gold.front_transparent",
+        "label": "Oro (Game Boy Color)"
+      }
+    ]
+  },
+  "theme": {
+    "accent": "#c9a227",
+    "accentDark": "#7a5f0e"
+  }
+}

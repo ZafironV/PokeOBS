@@ -1,0 +1,47 @@
+{
+  "id": "silver",
+  "name": "Pokémon Plata",
+  "shortName": "Plata",
+  "platform": "Game Boy Color",
+  "group": "Johto",
+  "order": 21,
+  "notes": "Pokémon Plata original (Generación II). No es un remake.",
+  "generation": 2,
+  "versionGroup": "gold-silver",
+  "textVersion": "silver",
+  "regionalPokedex": {
+    "name": "original-johto",
+    "label": "Pokédex de Johto (original, 251)",
+    "short": "Johto"
+  },
+  "nationalDex": {
+    "maxSpecies": 251,
+    "label": "Pokédex Nacional (hasta Gen. II: 251 especies)"
+  },
+  "sprites": {
+    "game": [
+      {
+        "path": "versions.generation-ii.silver.front_transparent",
+        "label": "Plata (Game Boy Color)"
+      }
+    ],
+    "animated": [
+      {
+        "path": "versions.generation-v.black-white.animated.front_default",
+        "label": "Animación pixel art de Negro/Blanco (no es de Plata)",
+        "fromOtherGame": true,
+        "animated": true
+      }
+    ],
+    "family": [
+      {
+        "path": "versions.generation-ii.silver.front_transparent",
+        "label": "Plata (Game Boy Color)"
+      }
+    ]
+  },
+  "theme": {
+    "accent": "#8a96a8",
+    "accentDark": "#4c5666"
+  }
+}

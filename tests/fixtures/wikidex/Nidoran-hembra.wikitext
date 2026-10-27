@@ -1,0 +1,44 @@
+== Descripción Pokédex ==
+{{Pokédex
+| generación = 1
+| rojoyazul = Aunque pequeñas, sus venenosas púas son muy peligrosas. La hembra tiene pequeños cuernos.
+| amarillo = A este Pokémon no le gusta luchar. Pero cuidado, sus pequeños cuernos segregan veneno.
+| oro = El veneno oculto en su pequeño cuerno es extremadamente potente. El menor roce sería fatal.
+| plata = Aunque no es muy agresivo, castiga a sus enemigos con púas venenosas, si se siente amenazado.
+| cristal = Pequeña y dócil, cuando la atacan, utiliza el cuerno venenoso que tiene encima de la cabeza.
+| rubí = Nidoran tiene púas que segregan un veneno muy potente. Se piensa que las desarrolló como protección del cuerpo tan pequeño que tiene. Cuando se enfada, libera una horrible sustancia tóxica por el cuerno.
+| zafiro = rubí
+| esmeralda = Dado su pequeño tamaño, se cree que desarrolló las púas venenosas a modo de protección. Cuando se enfada, libera una horrible sustancia tóxica por el cuerno.
+| rojofuego = No es grande, pero tampoco inofensivo. Las tóxicas púas que tiene son peligrosas. La hembra tiene cuernos pequeños.
+| verdehoja = rojoyazul
+| diamante = Aunque no le gusta luchar, una sola gota del veneno de sus púas puede resultar fatal.
+| perla = diamante
+| platino = diamante
+| oro heartgold = oro
+| plata soulsilver = Aunque no es muy agresivo, castiga a sus enemigos con púas venenosas, si se siente amenazada.
+| negro = diamante
+| blanco = diamante
+| negro 2 = diamante
+| blanco 2 = diamante
+| x = Aunque pequeñas, sus venenosas púas son muy peligrosas. Tiene un cuerno más pequeño que los machos.
+| y = De pequeño tamaño y dócil, cuando se le ataca, utiliza el cuerno venenoso que tiene encima de la cabeza.
+| rubí omega = Nidoran♀ tiene púas que segregan un veneno muy potente. Se piensa que las desarrolló como protección del cuerpo tan pequeño que tiene. Cuando se enfada, libera una horrible sustancia tóxica por el cuerno.
+| zafiro alfa = rubí omega
+| lgpe = A este dócil Pokémon no le gusta luchar, pero conviene tener cuidado con su pequeño cuerno, ya que segrega veneno.
+| espada = Posee un olfato más fino que los Nidoran♂. Usa los bigotes para percibir la dirección del viento y buscar comida a sotavento de sus depredadores.
+| escudo = Parte las bayas con sus duros incisivos para comérselas. La punta del cuerno de las hembras es más redondeada que la de los machos.
+| diamante brillante = Aunque no le gusta luchar, una sola gota del veneno de sus púas puede resultar letal.
+| perla reluciente = diamante brillante
+| stadium = Aunque pequeña, deberías tratarla con cuidado por sus tóxicas escamas. Tiene un pequeño cuerno poco útil.
+| stadium 2 = '''Pokémon Oro insertado''': Aunque no es muy agresivo, castiga a sus enemigos con púas venenosas, si se siente amenazado.
+'''Pokémon Plata insertado''': El veneno oculto en su pequeño cuerno es extremadamente potente. El menor roce sería fatal.
+| go = {{N|Nidoran♀ tiene púas que segregan un veneno muy potente. Se piensa que las desarrolló como protección para su pequeño cuerpo. Cuando se enfada, libera una horrible sustancia tóxica por el cuerno.|Nidoran♀ tiene púas que segregan un veneno muy potente. Se piensa que las desarrolló como protección del cuerpo tan pequeño que tiene. Cuando se enfada, libera una horrible sustancia tóxica por el cuerno.}}
+| masters = rubí omega
+}}
+
+=== En el anime ===
+{{DA/Encabezado}}
+{{DA/Descripción|Ash|102|ES = Nidoran hembra. Su pin venenoso es muy potente para su tamaño, pero su cuerno es más pequeño que el del macho.|HA = Nidoran hembra, tipo veneno. Es muy poderosa y sus ataques, pero sus espinas son más pequeñas que las del macho.}}
+{{DA/Descripción|Goh|1109|ES = Nidoran, Pokémon pin veneno. Es de [[tipo Veneno]]. El Nidoran macho evoluciona primero a [[Nidorino]] y luego a [[Nidoking]]; la Nidoran hembra es menos agresiva. Primero evoluciona a [[Nidorina]] y luego a [[Nidoqueen]].|HA = Nidoran, el Pokémon pin veneno. Tipo veneno. El Nidoran macho primero evoluciona a Nidorino y luego a Nidoking; la Nidoran hembra, menos agresiva, primero evoluciona a Nidorina y luego a Nidoqueen.|Última=Sí}}
+{{DA/Fin}}
+

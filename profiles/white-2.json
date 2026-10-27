@@ -1,0 +1,46 @@
+{
+  "id": "white-2",
+  "name": "Pokémon Blanco 2",
+  "shortName": "Blanco 2",
+  "platform": "Nintendo DS",
+  "group": "Teselia",
+  "order": 53,
+  "notes": "Pokémon Blanco 2 (Generación V): secuela directa de Negro/Blanco, no un remake.",
+  "generation": 5,
+  "versionGroup": "black-2-white-2",
+  "textVersion": "white-2",
+  "regionalPokedex": {
+    "name": "updated-unova",
+    "label": "Pokédex de Teselia (Negro 2/Blanco 2, 301)",
+    "short": "Teselia"
+  },
+  "nationalDex": {
+    "maxSpecies": 649,
+    "label": "Pokédex Nacional (hasta Gen. V: 649 especies)"
+  },
+  "sprites": {
+    "game": [
+      {
+        "path": "versions.generation-v.black-white.front_default",
+        "label": "Negro/Blanco (Negro 2/Blanco 2 reutilizan estos sprites)"
+      }
+    ],
+    "animated": [
+      {
+        "path": "versions.generation-v.black-white.animated.front_default",
+        "label": "Animación de Negro/Blanco (Negro 2/Blanco 2 reutilizan estas animaciones)",
+        "animated": true
+      }
+    ],
+    "family": [
+      {
+        "path": "versions.generation-v.black-white.front_default",
+        "label": "Negro/Blanco (Negro 2/Blanco 2 reutilizan estos sprites)"
+      }
+    ]
+  },
+  "theme": {
+    "accent": "#a3577a",
+    "accentDark": "#5c2a42"
+  }
+}

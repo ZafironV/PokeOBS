@@ -1,0 +1,53 @@
+{
+  "id": "sapphire",
+  "name": "Pokémon Zafiro",
+  "shortName": "Zafiro",
+  "platform": "Game Boy Advance",
+  "group": "Hoenn",
+  "order": 31,
+  "notes": "Pokémon Zafiro original de GBA (Generación III). No es un remake.",
+  "generation": 3,
+  "versionGroup": "ruby-sapphire",
+  "textVersion": "sapphire",
+  "regionalPokedex": {
+    "name": "hoenn",
+    "label": "Pokédex de Hoenn (original, 202)",
+    "short": "Hoenn"
+  },
+  "nationalDex": {
+    "maxSpecies": 386,
+    "label": "Pokédex Nacional (hasta Gen. III: 386 especies)"
+  },
+  "sprites": {
+    "game": [
+      {
+        "path": "versions.generation-iii.ruby-sapphire.front_default",
+        "label": "Rubí/Zafiro (GBA)"
+      }
+    ],
+    "animated": [
+      {
+        "path": "versions.generation-iii.emerald.animated.front_default",
+        "label": "Animación de Esmeralda (Zafiro no tenía animaciones)",
+        "fromOtherGame": true,
+        "animated": true
+      },
+      {
+        "path": "versions.generation-v.black-white.animated.front_default",
+        "label": "Animación pixel art de Negro/Blanco (no es de Zafiro)",
+        "fromOtherGame": true,
+        "animated": true
+      }
+    ],
+    "family": [
+      {
+        "path": "versions.generation-iii.ruby-sapphire.front_default",
+        "label": "Rubí/Zafiro (GBA)"
+      }
+    ]
+  },
+  "theme": {
+    "accent": "#1f4fb8",
+    "accentDark": "#0e2a6e"
+  }
+}

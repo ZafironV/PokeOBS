@@ -1,0 +1,49 @@
+{
+  "id": "omega-ruby",
+  "name": "Pokémon Rubí Omega",
+  "shortName": "Rubí Omega",
+  "platform": "Nintendo 3DS",
+  "group": "Hoenn",
+  "order": 33,
+  "notes": "Pokémon Rubí Omega (3DS, Generación VI): remake de Rubí/Zafiro. Usa datos de la Gen. VI.",
+  "generation": 6,
+  "versionGroup": "omega-ruby-alpha-sapphire",
+  "textVersion": "omega-ruby",
+  "regionalPokedex": {
+    "name": "updated-hoenn",
+    "label": "Pokédex de Hoenn (Rubí Omega/Zafiro Alfa, 211)",
+    "short": "Hoenn"
+  },
+  "nationalDex": {
+    "maxSpecies": 721,
+    "label": "Pokédex Nacional (hasta Gen. VI: 721 especies)"
+  },
+  "sprites": {
+    "game": [
+      {
+        "path": "versions.generation-vi.omega-ruby-alpha-sapphire.front_default",
+        "label": "Modelo 3D de Rubí Omega/Zafiro Alfa",
+        "render3d": true
+      }
+    ],
+    "animated": [
+      {
+        "path": "versions.generation-v.black-white.animated.front_default",
+        "label": "Animación pixel art de Negro/Blanco (no es de Rubí Omega)",
+        "fromOtherGame": true,
+        "animated": true
+      }
+    ],
+    "family": [
+      {
+        "path": "versions.generation-vi.omega-ruby-alpha-sapphire.front_default",
+        "label": "Modelo 3D de Rubí Omega/Zafiro Alfa",
+        "render3d": true
+      }
+    ]
+  },
+  "theme": {
+    "accent": "#c4183c",
+    "accentDark": "#6e0a1e"
+  }
+}

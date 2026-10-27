@@ -1,0 +1,63 @@
+{
+  "id": "emerald",
+  "name": "Pokémon Esmeralda",
+  "shortName": "Esmeralda",
+  "platform": "Game Boy Advance",
+  "group": "Hoenn",
+  "order": 32,
+  "notes": "Edición Esmeralda original de GBA (Generación III). No es Rubí Omega / Zafiro Alfa.",
+  "generation": 3,
+  "versionGroup": "emerald",
+  "textVersion": "emerald",
+  "regionalPokedex": {
+    "name": "hoenn",
+    "label": "Pokédex de Hoenn (original, 202)",
+    "short": "Hoenn"
+  },
+  "nationalDex": {
+    "maxSpecies": 386,
+    "label": "Pokédex Nacional (hasta Gen. III: 386 especies)"
+  },
+  "sprites": {
+    "game": [
+      {
+        "path": "versions.generation-iii.emerald.front_default",
+        "label": "Esmeralda (GBA)"
+      }
+    ],
+    "animated": [
+      {
+        "path": "versions.generation-iii.emerald.animated.front_default",
+        "label": "Animación de Esmeralda (GBA)",
+        "animated": true
+      },
+      {
+        "path": "versions.generation-v.black-white.animated.front_default",
+        "label": "Animación pixel art de Negro/Blanco (no es de Esmeralda)",
+        "fromOtherGame": true,
+        "animated": true
+      }
+    ],
+    "family": [
+      {
+        "path": "versions.generation-iii.emerald.front_default",
+        "label": "Esmeralda (GBA)"
+      }
+    ]
+  },
+  "theme": {
+    "accent": "#1f9d63",
+    "accentDark": "#0d5c38"
+  },
+  "autoDetect": {
+    "engine": "gen3",
+    "gameCodes": ["BPEE", "BPES"],
+    "inBattle": { "address": "0x030026F9", "mask": "0x02" },
+    "battleTypeFlags": "0x02022FEC",
+    "battleMons": "0x02024084",
+    "party": "0x020244E9",
+    "saveBlockPointers": "0x03005D8C",
+    "mapHeader": "0x02037318",
+    "backupMapLayout": "0x03005DC0"
+  }
+}

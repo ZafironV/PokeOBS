@@ -1,0 +1,29 @@
+node_modules/
+dist/
+data/
+*.log
+elements/
+*.gba
+referencias/
+release/
+
+# Nunca al repositorio: claves, certificados y variables de entorno
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Ni archivos del juego o de RetroArch: ROMs, partidas, núcleos y comprimidos
+*.gbc
+*.gb
+*.nds
+*.sav
+*.srm
+*.state
+*.state*
+*.dll
+*.zip
+*.rar
+*.7z

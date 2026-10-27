@@ -1,0 +1,53 @@
+{
+  "id": "lets-go-eevee",
+  "name": "Pokémon: Let's Go, Eevee!",
+  "shortName": "Let's Go, Eevee!",
+  "platform": "Nintendo Switch",
+  "group": "Kanto",
+  "order": 16,
+  "notes": "Let's Go, Eevee! (Switch, Generación VII): remake de Amarillo. Solo contiene 153 especies y no tiene Pokédex Nacional.",
+  "generation": 7,
+  "versionGroup": "lets-go-pikachu-lets-go-eevee",
+  "textVersion": "lets-go-eevee",
+  "regionalPokedex": {
+    "name": "letsgo-kanto",
+    "label": "Pokédex de Let's Go (153 especies)",
+    "short": "Kanto (Let's Go)"
+  },
+  "nationalDex": {
+    "maxSpecies": 809,
+    "label": "No disponible en este juego",
+    "available": false
+  },
+  "familyScope": "regional",
+  "sprites": {
+    "game": [
+      {
+        "path": "versions.generation-vii.lets-go-pikachu-lets-go-eevee.front_default",
+        "label": "Modelo 3D animado de Let's Go",
+        "render3d": true,
+        "animated": true
+      }
+    ],
+    "animated": [
+      {
+        "path": "versions.generation-v.black-white.animated.front_default",
+        "label": "Animación pixel art de Negro/Blanco (no es de Let's Go)",
+        "fromOtherGame": true,
+        "animated": true
+      }
+    ],
+    "family": [
+      {
+        "path": "versions.generation-vii.lets-go-pikachu-lets-go-eevee.front_default",
+        "label": "Modelo 3D animado de Let's Go",
+        "render3d": true,
+        "animated": true
+      }
+    ]
+  },
+  "theme": {
+    "accent": "#b07a3c",
+    "accentDark": "#6a4520"
+  }
+}

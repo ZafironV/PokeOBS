@@ -1,0 +1,30 @@
+== Descripción Pokédex ==
+{{Pokédex
+| generación = 4
+| diamante = Cuando Burmy evolucionó, su caparazón pasó a formar parte de este Pokémon.
+| perla = Su apariencia varía según dónde evolucione. Los materiales que halla pasan a formar parte de su cuerpo.
+| platino = Cuando evoluciona incorpora a su cuerpo los materiales del entorno. Por eso hay muchas variantes.
+| oro heartgold = Dicen que si Burmy evoluciona a Wormadam cuando hace frío, su caparazón es más fuerte.
+| plata soulsilver = oro heartgold
+| negro = Cuando evoluciona, incorpora a su cuerpo los materiales del entorno. Por eso hay muchas variantes.
+| blanco = negro
+| negro 2 = negro
+| blanco 2 = negro
+| x = Su apariencia varía según dónde evolucione. Los materiales que haya pasan a formar parte de su cuerpo.
+| y = diamante
+| rubí omega = x
+| zafiro alfa = diamante
+| diamante brillante = Cuando Burmy evolucionó, su saco pasó a formar parte del Pokémon. Nunca se desprende de él.
+| perla reluciente = x
+| leyendas Arceus = * '''Tronco planta:''' Su manto vegetal ha pasado a formar parte de su cuerpo, como si de pelo o piel se tratara. Presumo que es a consecuencia de su evolución.
+* '''Tronco arena:''' Su piel arenosa es lo bastante dura como para resistir y repeler sin problema alguno los picotazos de un Starly.
+* '''Tronco basura:''' Su cuerpo compuesto de residuos adopta el color del entorno y le sirve de camuflaje, por lo que resulta idóneo para evitar a los depredadores.
+| go = diamante
+| masters = x
+}}
+
+=== En el anime ===
+{{DA/Encabezado}}
+{{DA/Descripción|Ash|499|ES = Wormadam, el Pokémon polilla y la forma evolucionada del [[Burmy]] hembra. Su aspecto cambia dependiendo de donde haya evolucionado.|HA = Wormadam, el Pokémon capullo y la forma evolucionada del [[Burmy]] femenino. Su apariencia cambia dependiendo del lugar en el que evolucione.|Última = Sí}}
+{{DA/Fin}}
+

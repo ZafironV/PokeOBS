@@ -1,0 +1,53 @@
+{
+  "id": "ruby",
+  "name": "Pokémon Rubí",
+  "shortName": "Rubí",
+  "platform": "Game Boy Advance",
+  "group": "Hoenn",
+  "order": 30,
+  "notes": "Pokémon Rubí original de GBA (Generación III). No es un remake.",
+  "generation": 3,
+  "versionGroup": "ruby-sapphire",
+  "textVersion": "ruby",
+  "regionalPokedex": {
+    "name": "hoenn",
+    "label": "Pokédex de Hoenn (original, 202)",
+    "short": "Hoenn"
+  },
+  "nationalDex": {
+    "maxSpecies": 386,
+    "label": "Pokédex Nacional (hasta Gen. III: 386 especies)"
+  },
+  "sprites": {
+    "game": [
+      {
+        "path": "versions.generation-iii.ruby-sapphire.front_default",
+        "label": "Rubí/Zafiro (GBA)"
+      }
+    ],
+    "animated": [
+      {
+        "path": "versions.generation-iii.emerald.animated.front_default",
+        "label": "Animación de Esmeralda (Rubí no tenía animaciones)",
+        "fromOtherGame": true,
+        "animated": true
+      },
+      {
+        "path": "versions.generation-v.black-white.animated.front_default",
+        "label": "Animación pixel art de Negro/Blanco (no es de Rubí)",
+        "fromOtherGame": true,
+        "animated": true
+      }
+    ],
+    "family": [
+      {
+        "path": "versions.generation-iii.ruby-sapphire.front_default",
+        "label": "Rubí/Zafiro (GBA)"
+      }
+    ]
+  },
+  "theme": {
+    "accent": "#c4183c",
+    "accentDark": "#7a0a20"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "firered",
+  "name": "Pokémon Rojo Fuego",
+  "shortName": "Rojo Fuego",
+  "platform": "Game Boy Advance",
+  "group": "Kanto",
+  "order": 13,
+  "notes": "Pokémon Rojo Fuego (GBA, Generación III): remake de Rojo/Verde. Usa datos de la Gen. III.",
+  "generation": 3,
+  "versionGroup": "firered-leafgreen",
+  "textVersion": "firered",
+  "regionalPokedex": {
+    "name": "kanto",
+    "label": "Pokédex de Kanto",
+    "short": "Kanto"
+  },
+  "nationalDex": {
+    "maxSpecies": 386,
+    "label": "Pokédex Nacional (hasta Gen. III: 386 especies)"
+  },
+  "sprites": {
+    "game": [
+      {
+        "path": "versions.generation-iii.firered-leafgreen.front_default",
+        "label": "Rojo Fuego/Verde Hoja (GBA)"
+      }
+    ],
+    "animated": [
+      {
+        "path": "versions.generation-iii.emerald.animated.front_default",
+        "label": "Animación de Esmeralda (Rojo Fuego no tenía animaciones)",
+        "fromOtherGame": true,
+        "animated": true
+      },
+      {
+        "path": "versions.generation-v.black-white.animated.front_default",
+        "label": "Animación pixel art de Negro/Blanco (no es de Rojo Fuego)",
+        "fromOtherGame": true,
+        "animated": true
+      }
+    ],
+    "family": [
+      {
+        "path": "versions.generation-iii.firered-leafgreen.front_default",
+        "label": "Rojo Fuego/Verde Hoja (GBA)"
+      }
+    ]
+  },
+  "theme": {
+    "accent": "#e8541e",
+    "accentDark": "#8f2a08"
+  }
+}

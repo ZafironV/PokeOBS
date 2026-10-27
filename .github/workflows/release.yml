@@ -1,0 +1,68 @@
+# Cada push a main publica una versión nueva de PokeOBS en GitHub Releases:
+# instalador .msi y su suma SHA-256. Las aplicaciones instaladas la descargan
+# solas (electron/updater.cjs).
+#
+# Versión: mayor.menor de package.json + el número de ejecución de este flujo
+# (1.0.1, 1.0.2…). Para pasar a 1.1.x, cambia "version" en package.json a 1.1.0.
+name: Publicar versión
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Dos push seguidos: se publican en orden, sin pisarse.
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Dependencias
+        run: npm ci --no-audit --no-fund
+
+      - name: Comprobaciones
+        run: |
+          npm run typecheck
+          npm test
+
+      - name: Número de versión
+        shell: bash
+        run: |
+          base=$(node -p "require('./package.json').version.split('.').slice(0, 2).join('.')")
+          version="$base.${{ github.run_number }}"
+          npm pkg set version="$version" updateRepo="${{ github.repository }}"
+          echo "VERSION=$version" >> "$GITHUB_ENV"
+
+      - name: Instalador MSI
+        run: npm run msi
+
+      - name: Suma SHA-256
+        shell: bash
+        run: |
+          cd release
+          sha256sum "PokeOBS-$VERSION.msi" | cut -d' ' -f1 > "PokeOBS-$VERSION.msi.sha256"
+
+      - name: Publicar en GitHub Releases
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "v$VERSION" \
+            "release/PokeOBS-$VERSION.msi" \
+            "release/PokeOBS-$VERSION.msi.sha256" \
+            --title "PokeOBS $VERSION" \
+            --target "${{ github.sha }}" \
+            --generate-notes

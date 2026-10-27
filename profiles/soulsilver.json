@@ -1,0 +1,52 @@
+{
+  "id": "soulsilver",
+  "name": "Pokémon Plata SoulSilver",
+  "shortName": "Plata SoulSilver",
+  "platform": "Nintendo DS",
+  "group": "Johto",
+  "order": 24,
+  "notes": "Pokémon Plata SoulSilver (DS, Generación IV): remake de Oro/Plata. Usa datos de la Gen. IV.",
+  "generation": 4,
+  "versionGroup": "heartgold-soulsilver",
+  "textVersion": "soulsilver",
+  "regionalPokedex": {
+    "name": "updated-johto",
+    "label": "Pokédex de Johto (HeartGold/SoulSilver, 256)",
+    "short": "Johto"
+  },
+  "nationalDex": {
+    "maxSpecies": 493,
+    "label": "Pokédex Nacional (hasta Gen. IV: 493 especies)"
+  },
+  "sprites": {
+    "game": [
+      {
+        "path": "versions.generation-iv.heartgold-soulsilver.front_default",
+        "label": "HeartGold/SoulSilver (Nintendo DS)"
+      }
+    ],
+    "animated": [
+      {
+        "path": "versions.generation-iv.heartgold-soulsilver.animated.front_default",
+        "label": "Animación de HeartGold/SoulSilver (DS)",
+        "animated": true
+      },
+      {
+        "path": "versions.generation-v.black-white.animated.front_default",
+        "label": "Animación pixel art de Negro/Blanco (no es de Plata SoulSilver)",
+        "fromOtherGame": true,
+        "animated": true
+      }
+    ],
+    "family": [
+      {
+        "path": "versions.generation-iv.heartgold-soulsilver.front_default",
+        "label": "HeartGold/SoulSilver (Nintendo DS)"
+      }
+    ]
+  },
+  "theme": {
+    "accent": "#9aa6b8",
+    "accentDark": "#525c6e"
+  }
+}

@@ -1,0 +1,450 @@
+/* Ficha estilo Pokédex retro. Compartida por el overlay y la vista previa del panel. */
+
+/* Silkscreen y VT323: fuentes pixel art con licencia OFL, servidas localmente. */
+@font-face {
+  font-family: 'Silkscreen';
+  font-weight: 400;
+  src: url('/fonts/silkscreen-latin-400-normal.woff2') format('woff2');
+  font-display: block;
+}
+@font-face {
+  font-family: 'Silkscreen';
+  font-weight: 700;
+  src: url('/fonts/silkscreen-latin-700-normal.woff2') format('woff2');
+  font-display: block;
+}
+@font-face {
+  font-family: 'VT323';
+  src: url('/fonts/vt323-latin-400-normal.woff2') format('woff2');
+  font-display: block;
+}
+
+.dex-card {
+  --accent: #d42a2a;
+  --accent-dark: #8e1414;
+  --screen: #e8f0d8;
+  --screen-ink: #1d2b1a;
+  --frame: #2a2a2e;
+  box-sizing: border-box;
+  width: 600px;
+  padding: 12px 14px 10px;
+  border-radius: 18px 18px 18px 40px;
+  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-dark) 100%);
+  border: 4px solid var(--frame-border, #141416);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.25),
+    0 4px 12px rgba(0, 0, 0, 0.45);
+  color: var(--frame-text, #fff);
+  font-family: 'VT323', 'Consolas', monospace;
+  overflow: hidden;
+}
+.dex-card *,
+.dex-card *::before,
+.dex-card *::after {
+  box-sizing: border-box;
+}
+
+/* Cabecera */
+.dex-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+.dex-lights {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  flex: none;
+}
+.lens {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 3px solid #f4f4f4;
+  background: radial-gradient(circle at 35% 35%, #bdf3ff 0 18%, #2b9fe0 40%, #0b4f8a 100%);
+  box-shadow: 0 0 0 2px #141416;
+}
+.led {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid #141416;
+}
+.led-r { background: #ff5a5a; }
+.led-y { background: #ffd84a; }
+.led-g { background: #5fe07a; }
+
+.dex-title {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  min-width: 0;
+  flex: 1;
+}
+.dex-num {
+  font-family: 'Silkscreen', monospace;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--title, #ffe9a8);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.45);
+  white-space: nowrap;
+  flex: none;
+}
+.dex-numprefix {
+  font-family: 'VT323', monospace;
+  font-size: 24px;
+  margin-right: 6px;
+}
+.dex-numlabel {
+  display: block;
+  font-family: 'VT323', monospace;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
+.dex-name {
+  font-family: 'Silkscreen', monospace;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.45);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+/* Cuerpo: pantalla con sprite + datos */
+.dex-body {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+}
+.dex-screen {
+  flex: none;
+  width: 208px;
+  height: 208px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.035) 0 2px, transparent 2px 4px),
+    var(--screen);
+  border: 6px solid var(--frame);
+  border-radius: 8px 8px 8px 22px;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+}
+.dex-sprite {
+  display: block;
+  flex: none;
+}
+.dex-nosprite {
+  font-family: 'Silkscreen', monospace;
+  font-size: 64px;
+  color: rgba(29, 43, 26, 0.35);
+}
+img.pixel {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+img.broken {
+  visibility: hidden;
+}
+
+.dex-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 12px;
+  background: var(--screen);
+  color: var(--screen-ink);
+  border: 4px solid var(--frame);
+  border-radius: 8px;
+}
+.dex-types {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.dex-type {
+  font-family: 'Silkscreen', monospace;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  padding: 4px 8px 5px;
+  border-radius: 4px;
+  background: var(--type);
+  color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.35);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.55);
+}
+.dex-desc {
+  margin: 0;
+  font-size: 23px;
+  line-height: 1.05;
+  display: -webkit-box;
+  -webkit-line-clamp: 11;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.dex-desc.long {
+  font-size: 20px;
+}
+.dex-desc.missing {
+  opacity: 0.6;
+  font-style: italic;
+}
+.dex-lang {
+  margin-top: auto;
+  align-self: flex-start;
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+  line-height: 1;
+  text-transform: uppercase;
+  padding: 2px 6px 1px;
+  border-radius: 3px;
+  background: var(--screen-ink);
+  color: var(--screen);
+}
+
+/* Familia evolutiva */
+.dex-family {
+  margin-top: 10px;
+  padding: 8px 12px 10px;
+  background: rgba(0, 0, 0, 0.22);
+  border-radius: 8px;
+}
+.dex-family-title {
+  margin: 0 0 6px;
+  font-family: 'Silkscreen', monospace;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--title, #ffe9a8);
+}
+.dex-family-empty {
+  margin: 0;
+  font-size: 20px;
+  opacity: 0.85;
+}
+
+.evo-tree {
+  --line: rgba(255, 255, 255, 0.75);
+  --gap: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  padding-bottom: 18px;
+}
+.evo-branch {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.evo-node {
+  /* El nombre va posicionado debajo: la caja del nodo es solo el sprite, así las líneas apuntan a su centro. */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 84px;
+  height: 64px;
+  flex: none;
+}
+.evo-sprite {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  overflow: hidden;
+}
+.evo-sprite img {
+  display: block;
+  flex: none;
+}
+.evo-missing {
+  font-family: 'Silkscreen', monospace;
+  font-size: 24px;
+  opacity: 0.5;
+}
+.evo-name {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 84px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0.9;
+}
+.evo-node.selected .evo-sprite {
+  background: #ffe9a8;
+  box-shadow: 0 0 0 3px #fff, 0 0 10px 2px rgba(255, 233, 168, 0.9);
+}
+.evo-node.selected .evo-name {
+  color: var(--title, #ffe9a8);
+  opacity: 1;
+}
+
+/* Conexiones: etapas de izquierda a derecha; las ramas se apilan en vertical. */
+.evo-children {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-left: calc(var(--gap) * 2);
+}
+.evo-children::before {
+  /* tramo desde el padre hasta la barra vertical */
+  content: '';
+  position: absolute;
+  left: 0;
+  top: calc(50% - 1px);
+  width: var(--gap);
+  border-top: 2px solid var(--line);
+}
+.evo-children > .evo-branch::before {
+  /* tramo desde la barra vertical hasta el hijo, con punta de flecha */
+  content: '';
+  position: absolute;
+  left: calc(var(--gap) * -1);
+  top: calc(50% - 1px);
+  width: calc(var(--gap) - 4px);
+  border-top: 2px solid var(--line);
+}
+.evo-children > .evo-branch > .evo-node::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: calc(50% - 5px);
+  border: 5px solid transparent;
+  border-left: 6px solid var(--line);
+}
+.evo-children > .evo-branch::after {
+  /* barra vertical que une las ramas */
+  content: '';
+  position: absolute;
+  left: calc(var(--gap) * -1);
+  top: -12px;
+  bottom: -12px;
+  border-left: 2px solid var(--line);
+}
+.evo-children > .evo-branch:first-child::after { top: 50%; }
+.evo-children > .evo-branch:last-child::after { bottom: 50%; }
+.evo-children > .evo-branch:only-child::after { display: none; }
+
+/* Modo abanico (muchas ramas, p. ej. Eevee): hijos en fila bajo el padre. */
+.evo-branch.fan {
+  flex-direction: column;
+  align-items: center;
+}
+.evo-branch.fan > .evo-children {
+  flex-direction: row;
+  gap: 2px;
+  padding-left: 0;
+  padding-top: 44px;
+}
+.evo-branch.fan > .evo-children::before {
+  left: calc(50% - 1px);
+  top: 21px;
+  width: 0;
+  height: 9px;
+  border-top: 0;
+  border-left: 2px solid var(--line);
+}
+.evo-branch.fan > .evo-children > .evo-branch::before {
+  left: calc(50% - 1px);
+  top: -14px;
+  width: 0;
+  height: 8px;
+  border-top: 0;
+  border-left: 2px solid var(--line);
+}
+.evo-branch.fan > .evo-children > .evo-branch > .evo-node::before {
+  left: calc(50% - 5px);
+  top: -6px;
+  border: 5px solid transparent;
+  border-top: 6px solid var(--line);
+}
+.evo-branch.fan > .evo-children > .evo-branch::after {
+  left: -1px;
+  right: -1px;
+  top: -14px;
+  bottom: auto;
+  border-left: 0;
+  border-top: 2px solid var(--line);
+}
+.evo-branch.fan > .evo-children > .evo-branch:first-child::after { left: 50%; }
+/* Abanico compacto: 6-8 ramas (Eevee en Gen IV y posteriores) caben en el ancho de la ficha. */
+.evo-branch.fan.compact > .evo-children > .evo-branch > .evo-node {
+  width: 64px;
+}
+.evo-branch.fan.compact > .evo-children > .evo-branch .evo-name {
+  width: 64px;
+  font-size: 16px;
+}
+.evo-branch.fan > .evo-children > .evo-branch:last-child::after { right: 50%; }
+
+.dex-foot {
+  margin-top: 6px;
+  text-align: right;
+  font-family: 'Silkscreen', monospace;
+  font-size: 16px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* «¡Nuevo!»: primera vez que se ve la especie en la partida */
+.dex-new {
+  flex: none;
+  align-self: flex-start;
+  margin: 4px 6px 0 auto;
+  padding: 4px 8px 5px;
+  font-family: 'Silkscreen', monospace;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #3a2600;
+  background: linear-gradient(180deg, #fff4a8 0%, #ffd23a 100%);
+  border: 2px solid #141416;
+  border-radius: 4px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+  transform: rotate(3deg);
+  /* Brillo intermitente: no cambia el tamaño, así nunca sobresale de la ficha. */
+  animation: dex-new-glow 1.4s ease-in-out infinite;
+}
+@keyframes dex-new-glow {
+  50% {
+    filter: brightness(1.25);
+  }
+}
+
+/* Textos que se pueden quitar o alinear (Diseño del directo → Ficha → Textos) */
+.dex-card.hide-number .dex-num,
+.dex-card.hide-types .dex-types,
+.dex-card.hide-desc .dex-desc,
+.dex-card.hide-desc .dex-lang,
+.dex-card.hide-family .dex-family,
+.dex-card.hide-footer .dex-foot {
+  display: none;
+}
+.dex-desc {
+  text-align: var(--desc-align, left);
+}

@@ -1,0 +1,32 @@
+== Descripción Pokédex ==
+{{Pokédex
+| generación = 4
+| diamante = La concha de su espalda es de tierra y se endurece cuando bebe agua. Vive cerca de los lagos.
+| perla = Realiza la fotosíntesis para obtener oxígeno. Si tiene sed, las hojas de la cabeza se marchitan.
+| platino = La concha de su espalda es de tierra. Si está sano, la concha de Turtwig debería estar húmeda.
+| oro heartgold = Realiza la fotosíntesis al bañarle los rayos de sol. Su concha está formada por tierra endurecida.
+| plata soulsilver = oro heartgold
+| negro = platino
+| blanco = platino
+| negro 2 = platino
+| blanco 2 = platino
+| x = oro heartgold
+| y = perla
+| rubí omega = oro heartgold
+| zafiro alfa = perla
+| diamante brillante = diamante
+| perla reluciente = Realiza la fotosíntesis con todo el cuerpo para obtener oxígeno. Cuando tiene sed, las hojas de la cabeza se marchitan.
+| leyendas Arceus = La luz del sol les aporta vitalidad. Su concha tiene una apariencia similar al limo y es ligeramente húmeda y cálida.
+| escarlata = Si su caparazón, hecho de tierra, está húmedo al tacto, es señal de que Turtwig se encuentra en plena forma.
+| púrpura = Al bañarlo los rayos de sol, realiza la fotosíntesis con todo el cuerpo. Su caparazón está formado por tierra endurecida.
+| go = {{n|Realiza la fotosíntesis para obtener oxígeno. Si tiene sed, las hojas de su cabeza se marchitan.|Realiza la fotosíntesis para obtener oxígeno. Si tiene sed, las hojas de la cabeza se marchitan..}}
+| ranger2 = Ataca escupiendo hojas y semillas.
+| masters = oro heartgold
+| sleep = Si su caparazón, hecho de tierra, está húmedo al tacto, es señal de que Turwig se encuentra en plena forma. Pocas cosas lo hacen tan feliz como sentir el rocío de la mañana en su caparazón mientras duerme.
+}}
+
+=== En el anime ===
+{{DA/Encabezado}}
+{{DA/Descripción|Ash|474|ES = Turtwig, el Pokémon hojita. Su caparazón está hecho de tierra y cuando absorbe agua, se hace más duro.|HA = Turtwig, el Pokémon hojita. Su concha está hecha de tierra y cuando absorbe el agua se hace más dura.|Última=Sí}}
+{{DA/Fin}}
+

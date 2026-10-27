@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PokeOBS · Panel</title>
+    <link rel="stylesheet" href="/css/card.css" />
+    <link rel="stylesheet" href="/css/game.css" />
+    <link rel="stylesheet" href="/css/control.css" />
+  </head>
+  <body>
+    <header class="top">
+      <h1>PokeOBS</h1>
+      <div class="pills">
+        <span id="pill-server" class="pill bad" title="Conexión con el servidor local">Servidor: desconectado</span>
+        <span id="pill-overlay" class="pill bad" title="Fuentes de navegador conectadas">Overlay: ninguno</span>
+        <span id="pill-auto" class="pill off" title="Conexión con RetroArch">RetroArch: apagado</span>
+      </div>
+    </header>
+
+    <nav class="nav" role="tablist" aria-label="Secciones del panel">
+      <button type="button" role="tab" data-page="directo">Directo</button>
+      <button type="button" role="tab" data-page="diseno">Diseño</button>
+      <button type="button" role="tab" data-page="turnos">Turnos</button>
+      <button type="button" role="tab" data-page="partida">Partida</button>
+      <button type="button" role="tab" data-page="obs">OBS</button>
+      <button type="button" role="tab" data-page="registro">Registro <span id="log-badge" class="badge" hidden></span></button>
+    </nav>
+
+    <main>
+      <!-- ───────────── Directo: la ficha de la Pokédex ───────────── -->
+      <div class="page" data-page="directo">
+        <section class="card-box">
+          <label class="field">
+            <span>Juego</span>
+            <select id="game"></select>
+          </label>
+          <p id="game-notes" class="hint"></p>
+
+          <div class="field">
+            <span>Catálogo</span>
+            <div class="seg" role="radiogroup">
+              <label><input type="radio" name="catalog" value="regional" /> <span id="lbl-regional">Regional</span></label>
+              <label><input type="radio" name="catalog" value="national" /> <span id="lbl-national">Nacional</span></label>
+            </div>
+          </div>
+          <p id="catalog-notes" class="hint"></p>
+        </section>
+
+        <section class="card-box">
+          <label class="field">
+            <span>Buscar Pokémon</span>
+            <input id="search" type="search" placeholder="Nombre o número" autocomplete="off" spellcheck="false" />
+          </label>
+          <p id="catalog-status" class="hint"></p>
+          <ul id="results" class="results" role="listbox" aria-label="Resultados"></ul>
+        </section>
+
+        <section class="card-box">
+          <h2>Vista previa <span id="preview-name" class="muted"></span></h2>
+          <div id="preview" class="preview"><p class="placeholder">Selecciona un Pokémon.</p></div>
+          <ul id="warnings" class="warnings"></ul>
+        </section>
+
+        <section class="card-box">
+          <div class="field">
+            <span>Sprites</span>
+            <div class="seg" role="radiogroup">
+              <label><input type="radio" name="sprite" value="game" /> Fiel al juego</label>
+              <label><input type="radio" name="sprite" value="animated" /> Animado</label>
+            </div>
+          </div>
+          <p id="sprite-notes" class="hint"></p>
+
+          <label class="field">
+            <span>Descripciones</span>
+            <select id="text-mode">
+              <option value="es-aprox">Español; si falta, el de la edición española más cercana</option>
+              <option value="es-exacto">Español de esta edición; si falta, inglés</option>
+              <option value="pokeapi">Solo PokéAPI (sin WikiDex)</option>
+            </select>
+          </label>
+          <p class="hint">Los textos españoles oficiales que no tiene PokéAPI se buscan en WikiDex y se guardan en caché. Si se usa el de otra edición, la ficha lo indica.</p>
+
+          <label class="field">
+            <span>Duración en pantalla: <strong id="duration-value">15 s</strong></span>
+            <input id="duration" type="range" min="5" max="60" step="1" value="15" />
+          </label>
+
+          <div class="actions">
+            <button id="btn-show" class="primary" disabled>Mostrar en directo</button>
+            <button id="btn-hide" class="danger" disabled>Ocultar ahora</button>
+          </div>
+          <div class="live">
+            <div id="live-text" class="live-text">Oculto</div>
+            <div class="bar"><div id="live-bar"></div></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ───────────── Diseño: elegir overlay · vista previa · ajustes ───────────── -->
+      <div class="page" data-page="diseno" hidden>
+        <div id="design-chips" class="chips" role="tablist" aria-label="Overlay que se ajusta">
+          <button type="button" role="tab" data-target="card">Ficha</button>
+          <button type="button" role="tab" data-target="party">Equipo</button>
+          <button type="button" role="tab" data-target="badges">Medallas</button>
+          <button type="button" role="tab" data-target="bag">Mochila</button>
+          <button type="button" role="tab" data-target="pc">PC</button>
+          <button type="button" role="tab" data-target="map">Mapa</button>
+        </div>
+        <div class="design-layout">
+          <div class="design-preview">
+            <div class="editor-bar">
+              <div class="seg small" role="radiogroup" aria-label="Vista previa">
+                <label><input type="radio" name="editor-view" value="zoom" checked /> El elemento</label>
+                <label><input type="radio" name="editor-view" value="canvas" /> Lienzo completo</label>
+              </div>
+            </div>
+            <div id="editor-stage" class="editor-stage"><p class="editor-empty">Cargando vista previa…</p></div>
+            <p id="editor-note" class="hint"></p>
+          </div>
+
+          <div class="design-settings">
+            <details class="card-box" open>
+              <summary>Visibilidad y posición</summary>
+              <div id="design-visible-box">
+                <label class="check">
+                  <input id="design-visible" type="checkbox" />
+                  <span>Visible siempre en el directo</span>
+                </label>
+                <p id="design-visible-hint" class="hint"></p>
+              </div>
+              <label class="field">
+                <span>Esquina</span>
+                <select id="design-anchor">
+                  <option value="top-left">Arriba a la izquierda</option>
+                  <option value="top-right">Arriba a la derecha</option>
+                  <option value="center-left">Centro a la izquierda</option>
+                  <option value="center-right">Centro a la derecha</option>
+                  <option value="bottom-left">Abajo a la izquierda</option>
+                  <option value="bottom-right">Abajo a la derecha</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Escala: <strong id="design-scale-value">100 %</strong></span>
+                <input id="design-scale" type="range" min="0.5" max="2" step="0.05" value="1" />
+              </label>
+              <label class="field">
+                <span>Margen horizontal: <strong id="design-offx-value">48 px</strong></span>
+                <input id="design-offx" type="range" min="0" max="1000" step="4" value="48" />
+              </label>
+              <label class="field">
+                <span>Margen vertical: <strong id="design-offy-value">48 px</strong></span>
+                <input id="design-offy" type="range" min="0" max="1000" step="4" value="48" />
+              </label>
+              <p id="design-group-note" class="hint warn"></p>
+            </details>
+
+            <details class="card-box" id="design-style-box" open>
+              <summary>Presentación</summary>
+              <div id="design-style"></div>
+              <div id="design-rotation-box">
+                <label class="field">
+                  <span>Cambiar de bolsillo o de caja cada <strong id="rotate-value">6 s</strong></span>
+                  <input id="rotate-sec" type="range" min="3" max="30" step="1" value="6" />
+                </label>
+                <label class="field">
+                  <span>«Mostrar en directo» enseña la mochila o el PC durante <strong id="showcase-value">10 s</strong></span>
+                  <input id="showcase-sec" type="range" min="3" max="60" step="1" value="10" />
+                </label>
+              </div>
+            </details>
+
+            <details class="card-box" id="design-texts-box" open>
+              <summary>Textos</summary>
+              <div id="design-texts"></div>
+            </details>
+
+            <details class="card-box" id="design-colors-box">
+              <summary>Colores</summary>
+              <label class="field">
+                <span>Tema</span>
+                <select id="design-theme"></select>
+              </label>
+              <div id="design-colors" class="color-grid"></div>
+            </details>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────────── Turnos entre elementos ───────────── -->
+      <div class="page" data-page="turnos" hidden>
+        <section class="card-box" id="groups-box">
+          <h2>Turnos entre elementos</h2>
+          <p class="hint">
+            Los elementos de un grupo aparecen por turnos. <strong>Alternar</strong>: cada uno en su posición.
+            <strong>Mismo lugar</strong>: todos en la posición del grupo. Si el grupo incluye la ficha, al empezar un combate
+            la ficha aparece enseguida y los demás se apartan hasta que termina. Los turnos sin nada que enseñar se saltan.
+          </p>
+          <div id="groups-list"></div>
+          <div class="actions">
+            <button id="group-add" type="button">Añadir grupo</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- ───────────── Partida: RetroArch y datos del juego ───────────── -->
+      <div class="page" data-page="partida" hidden>
+        <section class="card-box" id="auto-box">
+          <h2>RetroArch <span class="muted">· lectura del juego</span></h2>
+          <label class="switch">
+            <input id="auto-enabled" type="checkbox" />
+            <span>Conectar con RetroArch</span>
+          </label>
+          <label class="check">
+            <input id="auto-battle" type="checkbox" />
+            <span>Mostrar la ficha del Pokémon rival en cada combate</span>
+          </label>
+          <div class="actions">
+            <button id="test-battle" type="button">Probar combate</button>
+            <button id="test-battle-double" type="button">Probar combate doble</button>
+          </div>
+          <p class="hint">Simulan una detección: la ficha de un rival al azar del juego elegido sale en el directo, con «¡Nuevo!». No hace falta RetroArch.</p>
+          <p id="auto-state" class="auto-state">Desactivada.</p>
+          <dl class="auto-info">
+            <dt>Último rival</dt>
+            <dd id="auto-last">—</dd>
+            <dt>Consumo de PokeOBS</dt>
+            <dd id="auto-usage">—</dd>
+            <dt>Protección de red</dt>
+            <dd id="auto-firewall">—</dd>
+          </dl>
+          <label class="field">
+            <span>Combates dobles: las tarjetas se intercambian cada <strong id="swap-value">4 s</strong></span>
+            <input id="swap" type="range" min="2" max="15" step="1" value="4" />
+          </label>
+          <details>
+            <summary>Cómo preparar RetroArch (solo la primera vez)</summary>
+            <ol class="steps">
+              <li>Abre RetroArch.</li>
+              <li>Entra en <strong>Ajustes → Red</strong>.</li>
+              <li>Activa <strong>Comandos de red</strong>. El puerto debe ser <strong>55355</strong>.</li>
+              <li>Carga Pokémon Esmeralda con el núcleo <strong>mGBA</strong>.</li>
+              <li>En la pestaña <strong>Directo</strong>, en «Juego», elige <strong>Pokémon Esmeralda</strong>, y aquí activa la casilla.</li>
+            </ol>
+            <p class="hint">El cambio se guarda solo al cerrar RetroArch. No hace falta tocar ningún archivo.</p>
+          </details>
+          <details>
+            <summary>Opciones avanzadas</summary>
+            <label class="field">
+              <span>Frecuencia de lectura</span>
+              <select id="auto-interval">
+                <option value="250">4 veces por segundo (recomendado)</option>
+                <option value="500">2 veces por segundo</option>
+                <option value="1000">1 vez por segundo (mínimo consumo)</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Puerto de comandos de red de RetroArch</span>
+              <input id="auto-port" type="number" min="1" max="65535" value="55355" />
+            </label>
+          </details>
+          <h3 class="sub">Actividad</h3>
+          <ul id="auto-events" class="log"><li class="muted">Sin actividad.</li></ul>
+          <div class="actions">
+            <button id="auto-copy" type="button">Copiar diagnóstico</button>
+          </div>
+          <p class="hint">Si algo no funciona, pulsa «Copiar diagnóstico» y pega el texto en el chat.</p>
+        </section>
+
+        <section class="card-box" id="game-box">
+          <h2>Partida <span id="game-summary" class="muted"></span></h2>
+          <p id="game-hint" class="hint">Conecta con RetroArch (arriba) para ver tu equipo, medallas, mochila y PC.</p>
+          <div class="tabs" role="tablist">
+            <button type="button" role="tab" data-tab="party" aria-selected="true">Equipo</button>
+            <button type="button" role="tab" data-tab="badges">Medallas</button>
+            <button type="button" role="tab" data-tab="bag">Mochila</button>
+            <button type="button" role="tab" data-tab="pc">PC</button>
+            <button type="button" role="tab" data-tab="map">Mapa</button>
+          </div>
+          <div id="tab-party" class="tab-panel" role="tabpanel"></div>
+          <div id="tab-badges" class="tab-panel" role="tabpanel" hidden></div>
+          <div id="tab-bag" class="tab-panel" role="tabpanel" hidden>
+            <div id="pockets" class="pockets"></div>
+            <div id="bag-view"></div>
+            <div class="actions">
+              <button id="bag-show" type="button" class="primary">Mostrar la mochila en directo</button>
+            </div>
+          </div>
+          <div id="tab-map" class="tab-panel" role="tabpanel" hidden></div>
+          <div id="tab-pc" class="tab-panel" role="tabpanel" hidden>
+            <div class="pc-head">
+              <select id="pc-box" aria-label="Caja"></select>
+              <button id="pc-read" type="button">Leer el PC</button>
+            </div>
+            <p id="pc-status" class="hint"></p>
+            <div id="pc-view"></div>
+            <div class="actions">
+              <button id="pc-show" type="button" class="primary">Mostrar el PC en directo</button>
+            </div>
+          </div>
+          <div class="actions showcase-actions">
+            <button id="showcase-hide" type="button" class="danger">Quitar mochila/PC del directo</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- ───────────── OBS: direcciones, lienzo completo y pruebas ───────────── -->
+      <div class="page" data-page="obs" hidden>
+        <section class="card-box" id="urls-box">
+          <h2>Direcciones para OBS</h2>
+          <label class="field">
+            <span>Panel (Docks → Paneles de navegador personalizados)</span>
+            <div class="copy"><input id="url-control" readonly /><button data-copy="url-control">Copiar</button></div>
+          </label>
+          <label class="field">
+            <span>Ficha (Fuente → Navegador, 1920 × 1080)</span>
+            <div class="copy"><input id="url-overlay" readonly /><button data-copy="url-overlay">Copiar</button></div>
+          </label>
+          <label class="field">
+            <span>Equipo (Fuente → Navegador, 1920 × 1080)</span>
+            <div class="copy"><input id="url-equipo" readonly data-path="/equipo" /><button data-copy="url-equipo">Copiar</button></div>
+          </label>
+          <label class="field">
+            <span>Medallas (Fuente → Navegador, 1920 × 1080)</span>
+            <div class="copy"><input id="url-medallas" readonly data-path="/medallas" /><button data-copy="url-medallas">Copiar</button></div>
+          </label>
+          <label class="field">
+            <span>Mochila (Fuente → Navegador, 1920 × 1080)</span>
+            <div class="copy"><input id="url-mochila" readonly data-path="/mochila" /><button data-copy="url-mochila">Copiar</button></div>
+          </label>
+          <label class="field">
+            <span>PC (Fuente → Navegador, 1920 × 1080)</span>
+            <div class="copy"><input id="url-pc" readonly data-path="/pc" /><button data-copy="url-pc">Copiar</button></div>
+          </label>
+          <label class="field">
+            <span>Mapa (Fuente → Navegador, 1920 × 1080)</span>
+            <div class="copy"><input id="url-mapa" readonly data-path="/mapa" /><button data-copy="url-mapa">Copiar</button></div>
+          </label>
+        </section>
+
+        <section class="card-box" id="app-box" hidden>
+          <h2>Aplicación</h2>
+          <label class="check">
+            <input id="app-autostart" type="checkbox" />
+            <span>Iniciar PokeOBS con Windows (empieza oculto en la bandeja, junto al reloj)</span>
+          </label>
+          <p class="hint">Cerrar la ventana no detiene PokeOBS: sigue en la bandeja y OBS no pierde nada. Para cerrarlo del todo: clic derecho en la Poké Ball de la bandeja → Salir.</p>
+        </section>
+
+        <section class="card-box">
+          <h2>Probar en OBS</h2>
+          <div class="actions">
+            <button id="test-overlays" type="button" class="primary">Probar overlays en directo</button>
+          </div>
+          <p id="test-status" class="hint">Enseña la partida de ejemplo en los overlays de OBS (equipo, medallas, mochila, PC y mapa) durante los segundos de «Mostrar en directo». Después vuelven tus datos reales.</p>
+        </section>
+
+        <details class="card-box" id="preview-box">
+          <summary>Lienzo completo del directo</summary>
+          <label class="check">
+            <input id="demo-enabled" type="checkbox" />
+            <span>Usar partida de ejemplo (solo aquí: el directo no la recibe)</span>
+          </label>
+          <div id="preview-layers" class="layers"></div>
+          <div id="live-preview" class="live-preview"></div>
+          <p class="hint">Lienzo de 1920 × 1080 a escala, con todos los overlays en su posición real. Los cuadros grises son la transparencia.</p>
+        </details>
+      </div>
+
+      <!-- ───────────── Registro ───────────── -->
+      <div class="page" data-page="registro" hidden>
+        <section class="card-box">
+          <h2>Registro</h2>
+          <ul id="log" class="log"><li class="muted">Sin incidencias.</li></ul>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="/js/control.js"></script>
+  </body>
+</html>

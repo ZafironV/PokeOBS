@@ -1,0 +1,55 @@
+{
+  "id": "red",
+  "name": "Pokémon Rojo",
+  "shortName": "Rojo",
+  "platform": "Game Boy",
+  "group": "Kanto",
+  "order": 10,
+  "notes": "Pokémon Rojo original de Game Boy (Generación I). No es un remake.",
+  "generation": 1,
+  "versionGroup": "red-blue",
+  "textVersion": "red",
+  "regionalPokedex": {
+    "name": "kanto",
+    "label": "Pokédex de Kanto",
+    "short": "Kanto"
+  },
+  "nationalDex": {
+    "maxSpecies": 151,
+    "label": "Pokédex Nacional (Gen. I: 151 especies)"
+  },
+  "sprites": {
+    "game": [
+      {
+        "path": "versions.generation-i.red-blue.front_transparent",
+        "label": "Rojo/Azul (Game Boy)"
+      },
+      {
+        "path": "versions.generation-i.red-blue.front_default",
+        "label": "Rojo/Azul (Game Boy)"
+      }
+    ],
+    "animated": [
+      {
+        "path": "versions.generation-v.black-white.animated.front_default",
+        "label": "Animación pixel art de Negro/Blanco (no es de Rojo)",
+        "fromOtherGame": true,
+        "animated": true
+      }
+    ],
+    "family": [
+      {
+        "path": "versions.generation-i.red-blue.front_transparent",
+        "label": "Rojo/Azul (Game Boy)"
+      },
+      {
+        "path": "versions.generation-i.red-blue.front_default",
+        "label": "Rojo/Azul (Game Boy)"
+      }
+    ]
+  },
+  "theme": {
+    "accent": "#d42a2a",
+    "accentDark": "#8e1414"
+  }
+}

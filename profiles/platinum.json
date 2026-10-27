@@ -1,0 +1,52 @@
+{
+  "id": "platinum",
+  "name": "Pokémon Platino",
+  "shortName": "Platino",
+  "platform": "Nintendo DS",
+  "group": "Sinnoh",
+  "order": 42,
+  "notes": "Pokémon Platino original (Generación IV), con la Pokédex de Sinnoh ampliada.",
+  "generation": 4,
+  "versionGroup": "platinum",
+  "textVersion": "platinum",
+  "regionalPokedex": {
+    "name": "extended-sinnoh",
+    "label": "Pokédex de Sinnoh (Platino, 210)",
+    "short": "Sinnoh"
+  },
+  "nationalDex": {
+    "maxSpecies": 493,
+    "label": "Pokédex Nacional (hasta Gen. IV: 493 especies)"
+  },
+  "sprites": {
+    "game": [
+      {
+        "path": "versions.generation-iv.platinum.front_default",
+        "label": "Platino (Nintendo DS)"
+      }
+    ],
+    "animated": [
+      {
+        "path": "versions.generation-iv.platinum.animated.front_default",
+        "label": "Animación de Platino (DS)",
+        "animated": true
+      },
+      {
+        "path": "versions.generation-v.black-white.animated.front_default",
+        "label": "Animación pixel art de Negro/Blanco (no es de Platino)",
+        "fromOtherGame": true,
+        "animated": true
+      }
+    ],
+    "family": [
+      {
+        "path": "versions.generation-iv.platinum.front_default",
+        "label": "Platino (Nintendo DS)"
+      }
+    ]
+  },
+  "theme": {
+    "accent": "#8c8f99",
+    "accentDark": "#46484f"
+  }
+}

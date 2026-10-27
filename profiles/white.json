@@ -1,0 +1,46 @@
+{
+  "id": "white",
+  "name": "Pokémon Blanco",
+  "shortName": "Blanco",
+  "platform": "Nintendo DS",
+  "group": "Teselia",
+  "order": 51,
+  "notes": "Pokémon Blanco original (Generación V).",
+  "generation": 5,
+  "versionGroup": "black-white",
+  "textVersion": "white",
+  "regionalPokedex": {
+    "name": "original-unova",
+    "label": "Pokédex de Teselia (Negro/Blanco, 156)",
+    "short": "Teselia"
+  },
+  "nationalDex": {
+    "maxSpecies": 649,
+    "label": "Pokédex Nacional (hasta Gen. V: 649 especies)"
+  },
+  "sprites": {
+    "game": [
+      {
+        "path": "versions.generation-v.black-white.front_default",
+        "label": "Negro/Blanco (Nintendo DS)"
+      }
+    ],
+    "animated": [
+      {
+        "path": "versions.generation-v.black-white.animated.front_default",
+        "label": "Animación de Negro/Blanco (DS)",
+        "animated": true
+      }
+    ],
+    "family": [
+      {
+        "path": "versions.generation-v.black-white.front_default",
+        "label": "Negro/Blanco (Nintendo DS)"
+      }
+    ]
+  },
+  "theme": {
+    "accent": "#9aa0aa",
+    "accentDark": "#55595f"
+  }
+}

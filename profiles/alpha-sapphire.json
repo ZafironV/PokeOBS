@@ -1,0 +1,49 @@
+{
+  "id": "alpha-sapphire",
+  "name": "Pokémon Zafiro Alfa",
+  "shortName": "Zafiro Alfa",
+  "platform": "Nintendo 3DS",
+  "group": "Hoenn",
+  "order": 34,
+  "notes": "Pokémon Zafiro Alfa (3DS, Generación VI): remake de Rubí/Zafiro. Usa datos de la Gen. VI.",
+  "generation": 6,
+  "versionGroup": "omega-ruby-alpha-sapphire",
+  "textVersion": "alpha-sapphire",
+  "regionalPokedex": {
+    "name": "updated-hoenn",
+    "label": "Pokédex de Hoenn (Rubí Omega/Zafiro Alfa, 211)",
+    "short": "Hoenn"
+  },
+  "nationalDex": {
+    "maxSpecies": 721,
+    "label": "Pokédex Nacional (hasta Gen. VI: 721 especies)"
+  },
+  "sprites": {
+    "game": [
+      {
+        "path": "versions.generation-vi.omega-ruby-alpha-sapphire.front_default",
+        "label": "Modelo 3D de Rubí Omega/Zafiro Alfa",
+        "render3d": true
+      }
+    ],
+    "animated": [
+      {
+        "path": "versions.generation-v.black-white.animated.front_default",
+        "label": "Animación pixel art de Negro/Blanco (no es de Zafiro Alfa)",
+        "fromOtherGame": true,
+        "animated": true
+      }
+    ],
+    "family": [
+      {
+        "path": "versions.generation-vi.omega-ruby-alpha-sapphire.front_default",
+        "label": "Modelo 3D de Rubí Omega/Zafiro Alfa",
+        "render3d": true
+      }
+    ]
+  },
+  "theme": {
+    "accent": "#1f4fb8",
+    "accentDark": "#0d2766"
+  }
+}

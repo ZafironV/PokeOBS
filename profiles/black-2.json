@@ -1,0 +1,46 @@
+{
+  "id": "black-2",
+  "name": "Pokémon Negro 2",
+  "shortName": "Negro 2",
+  "platform": "Nintendo DS",
+  "group": "Teselia",
+  "order": 52,
+  "notes": "Pokémon Negro 2 (Generación V): secuela directa de Negro/Blanco, no un remake.",
+  "generation": 5,
+  "versionGroup": "black-2-white-2",
+  "textVersion": "black-2",
+  "regionalPokedex": {
+    "name": "updated-unova",
+    "label": "Pokédex de Teselia (Negro 2/Blanco 2, 301)",
+    "short": "Teselia"
+  },
+  "nationalDex": {
+    "maxSpecies": 649,
+    "label": "Pokédex Nacional (hasta Gen. V: 649 especies)"
+  },
+  "sprites": {
+    "game": [
+      {
+        "path": "versions.generation-v.black-white.front_default",
+        "label": "Negro/Blanco (Negro 2/Blanco 2 reutilizan estos sprites)"
+      }
+    ],
+    "animated": [
+      {
+        "path": "versions.generation-v.black-white.animated.front_default",
+        "label": "Animación de Negro/Blanco (Negro 2/Blanco 2 reutilizan estas animaciones)",
+        "animated": true
+      }
+    ],
+    "family": [
+      {
+        "path": "versions.generation-v.black-white.front_default",
+        "label": "Negro/Blanco (Negro 2/Blanco 2 reutilizan estos sprites)"
+      }
+    ]
+  },
+  "theme": {
+    "accent": "#2f3d55",
+    "accentDark": "#121a28"
+  }
+}

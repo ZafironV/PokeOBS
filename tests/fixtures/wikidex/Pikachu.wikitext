@@ -1,0 +1,65 @@
+== Descripción Pokédex ==
+{{Pokédex
+| rojoyazul = Cuando varios de estos Pokémon se juntan, su energía puede causar fuertes tormentas.
+| amarillo = Mantiene su cola en alto para vigilar. Si das un tirón a su cola, querrá morderte.
+| oro = Este inteligente Pokémon tuesta las duras bayas con electricidad para hacerlas más comestibles.
+| plata = Levanta su cola para vigilar los alrededores. A veces, puede ser alcanzado por un rayo en esa pose.
+| cristal = Cuando se enfada, este Pokémon descarga la energía que almacena en el interior de los mofletes.
+| rubí = Cada vez que Pikachu se encuentra con algo nuevo, le lanza una sacudida eléctrica. Si ves alguna baya chamuscada, seguro que ha sido Pikachu; a veces no controla la intensidad de la descarga.
+| zafiro = Este Pokémon tiene unas bolsas en las mejillas donde almacena electricidad. Parece ser que se recargan por la noche, mientras Pikachu duerme. A veces, cuando se acaba de despertar y está aún medio dormido, descarga un poco.
+| esmeralda = Tiene unas bolsas en las mejillas en las que almacena electricidad. Cuando la libera de golpe, la potencia de la descarga es igual a la de un rayo.
+| rojofuego = Las bolsas de las mejillas están llenas de electricidad, que libera cuando se siente amenazado.
+| verdehoja = rojoyazul
+| diamante = Cuando se siente amenazado, las bolsas de sus mejillas emiten chisporroteos de electricidad.
+| perla = Vive en grupo en los bosques. Almacena electricidad en las bolsas de sus mejillas.
+| platino = A veces utiliza la electricidad de sus mejillas para recargar a un Pikachu amigo que esté débil.
+| oro heartgold = oro
+| plata soulsilver = plata
+| negro = platino
+| blanco = platino
+| negro 2 = platino
+| blanco 2 = platino
+| x = plata
+| y = rojofuego
+| rubí omega = Cada vez que un Pikachu se encuentra con algo nuevo, le lanza una descarga eléctrica. Cuando se ve alguna baya chamuscada, es muy probable que sea obra de un Pikachu, ya que a veces no controlan la intensidad de la descarga.
+| zafiro alfa = zafiro
+| sol = Recientemente se ha presentado un proyecto para reunir numerosos Pikachu y crear con ellos una central eléctrica.
+| luna = Pikachu almacena electricidad en su cuerpo. Si no la libera de vez en cuando y se desfoga, puede sufrir estrés.
+| ultrasol = Acumulan electricidad de forma natural. Los bosques donde habitan en grupos están en peligro constante de ser alcanzados por rayos.
+| ultraluna = Mientras duerme, acumula electricidad en las bolsas de sus mejillas. Si no logra conciliar el sueño, solo puede emitir débiles descargas.
+| lgpe = Los bosques son su hábitat natural. En las bolsas de las mejillas acumula electricidad, por lo que quien las toque puede recibir una descarga.
+| espada = * '''Pikachu:''' Cuanto más potente es la energía eléctrica que genera este Pokémon, más suaves y elásticas se vuelven las bolsas de sus mejillas.
+* '''Pikachu Gigamax:''' La energía del fenómeno Gigamax ha hecho que su cuerpo se expanda y que su cola pueda estirarse hasta alcanzar el cielo.
+| escudo = * '''Pikachu:''' Los miembros de esta especie se saludan entre sí uniendo sus colas y transmitiéndose corriente eléctrica.
+* '''Pikachu Gigamax:''' Un golpe con su cola en forma de rayo puede propinar al rival una descarga eléctrica con una intensidad comparable a la de un relámpago.
+| diamante brillante = Habita en bosques, donde forma grupos con sus congéneres. Almacena electricidad en las bolsas de las mejillas.
+| perla reluciente = Cuando se pone en alerta, las bolsas de sus mejillas emiten chisporroteos de electricidad.
+| leyendas Arceus = Acumula electricidad en las bolsas que tiene en las mejillas. Habita en los bosques, donde tuesta con gran astucia las duras bayas que encuentra para comérselas.
+| escarlata = Cuando se enfada, este Pokémon descarga la energía que almacena en el interior de las bolsas de las mejillas.
+| púrpura = rojoyazul
+| leyendas ZA = {{n|Las bolsas de sus mejillas están llenas de electricidad, que libera cuando se siente amenazado.|Las bolsas de las mejillas están llenas de electricidad, que libera cuando se siente amenazado.}}
+| stadium = Vive en bosques, lejos de la gente. Almacena electricidad en sus carrillos para eliminar a un enemigo si es atacado.
+| stadium 2 = '''Pokémon Oro insertado''': Levanta su cola para vigilar los alrededores. A veces, puede ser alcanzado por un rayo en esa pose.
+'''Pokémon Plata insertado''': Este inteligente Pokémon tuesta las duras bayas con electricidad para hacerlas más comestibles.
+| go = * '''Pikachu:''' Cada vez que un Pikachu se encuentra con algo nuevo, le lanza una descarga eléctrica. Cuando se ve alguna baya chamuscada, es muy probable que sea obra de un Pikachu, ya que a veces no controlan la intensidad de la descarga.
+* '''Pikachu Gigamax:''' {{N|La energía del fenómeno Gigamax hizo que su cuerpo se expandiera tanto que su cola puede alcanzar el cielo.|La energía del fenómeno Gigamax ha hecho que su cuerpo se expanda y que su cola pueda estirarse hasta alcanzar el cielo.}}
+| ranger = Pikachu descarga electricidad para recargar el Capturador.
+| ranger2 = Descarga electricidad para atacar.
+| ranger3 = Restaura la energía del Capturador.
+| pinballrz = rubí
+| new snap = Mientras duermen, generan electricidad y la almacenan en las bolsas que tienen en las mejillas. Son Pokémon de naturaleza curiosa, así que se ven a menudo por el campamento base.
+| masters = Acumulan electricidad de forma natural. Los bosques donde habitan en grupos están en peligro constante de ser alcanzados por rayos.
+| sleep = Mientras duerme, acumula electricidad en las bolsas de las mejillas. En ocasiones, la libera estando medio dormido, como si soñara que lanza descargas eléctricas.
+| pokopia = * '''Pikachu''': Cuanto más potente es la energía eléctrica que genera este Pokémon, más suaves y elásticas se vuelven las bolsas de sus mejillas.
+* '''Palidachu''': Este Pokémon compartía su electricidad a sus amigos cuando se enfermaban. Que su estructura física cambió y dejó de hacer electricidad.
+}}
+
+=== En el anime ===
+{{DA/Encabezado}}
+{{DA/Descripción|Dawn/Maya|471|ES = Pikachu, el Pokémon ratón. Puede generar ataques eléctricos desde los coloretes eléctricos localizados en sus mejillas.|HA = Pikachu, el Pokémon ratón. Puede generar ataques eléctricos en las bolitas que tiene en ambas mejillas.}}
+{{DA/Descripción|Trip|661|ES = Pikachu, el Pokémon ratón y forma evolucionada de [[Pichu]]. La cola de Pikachu a veces es alcanzada por relámpagos, cuando la levanta para investigar su entorno.|HA = Pikachu, el Pokémon ratón y la forma evolucionada de [[Pichu]]. La cola de Pikachu puede ser alcanzada por rayos, ya que la levanta para revisar su entorno.}}
+{{DA/Descripción|Cameron|755|ES = Pikachu, el Pokémon ratón y forma evolucionada de [[Pichu]]. Pikachu puede ayudar a otros Pikachu que se sientan débiles compartiendo su corriente eléctrica.|HA = Pikachu, el Pokémon ratón y la forma evolucionada de [[Pichu]]. Ayuda a otros Pikachu que se sienten débiles compartiendo su corriente eléctrica.}}
+{{DA/Descripción|RotomDex|946|ES = Pikachu, Pokémon ratón. Es de [[tipo Eléctrico]]. Es capaz de analizar su entorno levantando la cola y si le tiras de ella, te pegará un mordisco.|HA = Pikachu, el Pokémon ratón, de [[tipo Eléctrico]]. Levanta su cola para detectar su entorno. Si tiras de su cola, te morderá.}}
+{{DA/Descripción|Goh|1124|ES = Pikachu, Pokémon ratón. Es de [[tipo Eléctrico]]. Los Pikachu poseen unas bolsas en las mejillas donde guardan electricidad que liberan si son amenazados, las colas de los Pikachu machos y hembras son diferentes.|HA = Pikachu, el Pokémon ratón. [[Tipo Eléctrico]]. Las bolsas en las mejillas de Pikachu almacenan electricidad que se libera bajo amenaza. Los Pikachu machos y hembras tienen colas diferentes.|Última=Sí}}
+{{DA/Fin}}
+

@@ -1,0 +1,52 @@
+{
+  "id": "heartgold",
+  "name": "Pokémon Oro HeartGold",
+  "shortName": "Oro HeartGold",
+  "platform": "Nintendo DS",
+  "group": "Johto",
+  "order": 23,
+  "notes": "Pokémon Oro HeartGold (DS, Generación IV): remake de Oro/Plata. Usa datos de la Gen. IV.",
+  "generation": 4,
+  "versionGroup": "heartgold-soulsilver",
+  "textVersion": "heartgold",
+  "regionalPokedex": {
+    "name": "updated-johto",
+    "label": "Pokédex de Johto (HeartGold/SoulSilver, 256)",
+    "short": "Johto"
+  },
+  "nationalDex": {
+    "maxSpecies": 493,
+    "label": "Pokédex Nacional (hasta Gen. IV: 493 especies)"
+  },
+  "sprites": {
+    "game": [
+      {
+        "path": "versions.generation-iv.heartgold-soulsilver.front_default",
+        "label": "HeartGold/SoulSilver (Nintendo DS)"
+      }
+    ],
+    "animated": [
+      {
+        "path": "versions.generation-iv.heartgold-soulsilver.animated.front_default",
+        "label": "Animación de HeartGold/SoulSilver (DS)",
+        "animated": true
+      },
+      {
+        "path": "versions.generation-v.black-white.animated.front_default",
+        "label": "Animación pixel art de Negro/Blanco (no es de Oro HeartGold)",
+        "fromOtherGame": true,
+        "animated": true
+      }
+    ],
+    "family": [
+      {
+        "path": "versions.generation-iv.heartgold-soulsilver.front_default",
+        "label": "HeartGold/SoulSilver (Nintendo DS)"
+      }
+    ]
+  },
+  "theme": {
+    "accent": "#d4a017",
+    "accentDark": "#7f5f05"
+  }
+}

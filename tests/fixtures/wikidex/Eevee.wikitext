@@ -1,0 +1,63 @@
+== Descripción Pokédex ==
+{{Pokédex
+| generación = 1
+| rojoyazul = De irregular código genético, puede mutar si se le expone a la radiación de los elementos roca.
+| amarillo = Su código genético es muy inestable. Puede evolucionar en diversas razas de Pokémon.
+| oro = Es capaz de alterar la composición de su cuerpo para confundirse con el entorno.
+| plata = Su ADN irregular se ve afectado por el entorno. Evoluciona si cambia su entorno.
+| cristal = Es capaz de evolucionar de muchas maneras para adaptarse sin problemas a cualquier medio.
+| rubí = La configuración genética de Eevee le permite mutar y adaptarse enseguida a cualquier medio en el que viva. La evolución de este Pokémon es posible gracias a las radiaciones emitidas por varias piedras.
+| zafiro = rubí
+| esmeralda = Su configuración genética le permite mutar y adaptarse enseguida a cualquier medio. Evoluciona gracias a las radiaciones emitidas por varias piedras.
+| rojofuego = Es un Pokémon rarísimo que puede evolucionar de mil formas distintas según las circunstancias.
+| verdehoja = rojoyazul
+| diamante = Un extraño Pokémon que se adapta a los entornos más hostiles gracias a sus diferentes evoluciones.
+| perla = diamante
+| platino = Su composición genética es algo irregular, por eso cambia de forma muy rápido y por diversas causas.
+| oro heartgold = oro
+| plata soulsilver = plata
+| negro = platino
+| blanco = platino
+| negro 2 = Su irregular estructura genética encierra el secreto de su capacidad para adoptar evoluciones de lo más diversas.
+| blanco 2 = negro 2
+| x = diamante
+| y = negro 2
+| rubí omega = La configuración genética de Eevee le permite mutar y adaptarse enseguida a cualquier medio en el que viva. La evolución de este Pokémon suele ser posible gracias a las radiaciones emitidas por varias piedras.
+| zafiro alfa = rubí omega
+| sol = negro 2
+| luna = Según las últimas investigaciones, Eevee es capaz de evolucionar a ocho especies de Pokémon distintas.
+| ultrasol = Todavía no se ha esclarecido el motivo por el que es el único Pokémon que presenta un código genético inestable.
+| ultraluna = Su genética es muy sensible a la influencia del entorno, hasta el punto de que su rostro puede llegar a parecerse al de su Entrenador.
+| lgpe = Puede evolucionar a varias especies distintas. Su código genético es la clave para descifrar el misterio de dicha evolución.
+| espada = * '''Eevee:''' Es capaz de alterar la composición de su cuerpo para adaptarse al entorno.
+* '''Eevee Gigamax:''' Envuelve y atrapa a sus enemigos con el pelaje de su cuello que, gracias al fenómeno Gigamax, es ahora mucho más denso y esponjoso.
+| escudo = * '''Eevee:''' Su irregular estructura genética alberga el secreto de la capacidad que posee este Pokémon tan especial para adoptar evoluciones muy variadas.
+* '''Eevee Gigamax:''' Su ingenuidad ha alcanzado nuevas cotas. Juguetea inocentemente con cualquiera, pero es tan grande que termina aplastándolo.
+| diamante brillante = Un extraño Pokémon que se adapta a los entornos más hostiles gracias a los distintos poderes y aspectos que adopta al evolucionar.
+| perla reluciente = diamante brillante
+| leyendas Arceus = Puede adoptar distintas formas al evolucionar. Creemos que en él reside la clave para comprender el secreto de la evolución de los Pokémon.
+| escarlata = cristal
+| púrpura = De código genético irregular, puede mutar si se le expone a la radiación de piedras evolutivas.
+| leyendas ZA = {{NombreHaEs|Gracias a su irregular estructura genética, este Pokémon tan especial puede adoptar evoluciones muy variadas.|Su irregular estructura genética alberga el secreto de la capacidad que posee este Pokémon tan especial para adoptar evoluciones muy variadas.}}
+| stadium = Su código genético es irregular. Evoluciona a tres tipos de Pokémon cuando es expuesto a la radiación de las piedras elementales.
+| stadium 2 = '''Pokémon Oro insertado''': Su ADN irregular se ve afectado por el entorno. Evoluciona si cambia su entorno.
+'''Pokémon Plata insertado''': Es capaz de alterar la composición de su cuerpo para confundirse con el entorno.
+| go = * '''Eevee:'''La configuración genética de Eevee le permite mutar y adaptarse enseguida a cualquier medio en el que viva. La evolución de este Pokémon suele ser posible gracias a las radiaciones emitidas por varias piedras.
+* '''Eevee Gigamax:''' {{N|Envuelve y atrapa a sus enemigos con el pelaje de su cuello que, gracias al fenómeno Gigamax, se volvió mucho más denso y esponjoso.|Envuelve y atrapa a sus enemigos con el pelaje de su cuello que, gracias al fenómeno Gigamax, es ahora mucho más denso y esponjoso.}}
+| ranger2 = Se mueve con velocidad y embiste para atacar.
+| new snap = Se dice que su peculiar genética esconde un sinfín de posibilidades. Es posible que los Eevee de Lensis se hayan adaptado a los entornos de las diferentes islas.
+| masters = ultrasol
+| sleep = Su código genético inestable le proporciona un amplio abanico de posibles evoluciones. Quizás al dormir sueñe con la que adoptará en el futuro.
+| pokopia = cristal
+}}
+
+=== En el anime ===
+{{DA/Encabezado}}
+{{DA/Descripción|Ash|040|ES = Eevee, el Pokémon evolución. Tiene el potencial para evolucionar en tres tipos de Pokémon.|HA = Eevee, el Pokémon evolutivo. Tiene el potencial para evolucionar en uno de tres diferentes Pokémon.}}
+{{DA/Descripción|Ash|040|ES = Eevee puede evolucionar a uno de los tres siguientes Pokémon dependiendo de qué piedra se utilice. El uso de una piedra fuego lo hará evolucionar a Flareon, el Pokémon llama. Una piedra agua lo hará evolucionar a Vaporeon, el Pokémon burbuja. Una piedra trueno lo hará evolucionar a Jolteon, el Pokémon relámpago.|HA = Eevee evoluciona en uno de estos tres Pokémon dependiendo de qué roca se use con él. Usando una roca de fuego producirás un Flareon, el Pokémon de fuego. Una roca acuática producirá un Vaporeon, el Pokémon burbuja hielo. Y una roca trueno produce un Jolteon, el Pokémon rayo.}}
+{{DA/Descripción|Dawn/Maya|643|ES = Eevee, el Pokémon evolución. Eevee es un Pokémon único que se adapta a su medio ambiente cambiando de forma y habilidades al evolucionar.|HA = Eevee, el Pokémon evolución. Eevee es un Pokémon único que se puede adaptar a su ambiente al cambiar su forma y habilidades cuando evoluciona.}}
+{{DA/Descripción|Ash|764|ES = Eevee, el Pokémon evolución. Dependiendo de las circunstancias, Eevee puede evolucionar a distintas formas.|HA = Eevee, el Pokémon evolución. Eevee puede evolucionar de muchas formas dependiendo de las circunstancias.}}
+{{DA/Descripción|Serena|892|ES = Eevee, el Pokémon evolución. Son muy difíciles de ver y cuando evolucionan, son capaces de adaptarse a hábitats extremos cambiando sus habilidades y forma.|HA = Eevee, el Pokémon evolución. Eevee es difícil de ver y se puede adaptar a varios hábitats al evolucionar, cambiando sus capacidades y forma.}}
+{{DA/Descripción|Chloe|1138|ES = Eevee, Pokémon evolución. Es de tipo normal. Al tener un ADN inestable, Eevee tiene ocultas una amplia variedad de posibilidades evolutivas.|HA = Eevee, el Pokémon evolución. Tipo normal. Debido a su ADN inestable, Eevee posee una amplia variedad de posibilidades evolutivas ocultas dentro de sí.|Última = Sí}}
+{{DA/Fin}}
+

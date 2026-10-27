@@ -1,0 +1,52 @@
+{
+  "id": "crystal",
+  "name": "Pokémon Cristal",
+  "shortName": "Cristal",
+  "platform": "Game Boy Color",
+  "group": "Johto",
+  "order": 22,
+  "notes": "Pokémon Cristal original (Generación II). No es un remake.",
+  "generation": 2,
+  "versionGroup": "crystal",
+  "textVersion": "crystal",
+  "regionalPokedex": {
+    "name": "original-johto",
+    "label": "Pokédex de Johto (original, 251)",
+    "short": "Johto"
+  },
+  "nationalDex": {
+    "maxSpecies": 251,
+    "label": "Pokédex Nacional (hasta Gen. II: 251 especies)"
+  },
+  "sprites": {
+    "game": [
+      {
+        "path": "versions.generation-ii.crystal.front_transparent",
+        "label": "Cristal (Game Boy Color)"
+      }
+    ],
+    "animated": [
+      {
+        "path": "versions.generation-ii.crystal.animated.front_default",
+        "label": "Animación de Cristal (GBC)",
+        "animated": true
+      },
+      {
+        "path": "versions.generation-v.black-white.animated.front_default",
+        "label": "Animación pixel art de Negro/Blanco (no es de Cristal)",
+        "fromOtherGame": true,
+        "animated": true
+      }
+    ],
+    "family": [
+      {
+        "path": "versions.generation-ii.crystal.front_transparent",
+        "label": "Cristal (Game Boy Color)"
+      }
+    ]
+  },
+  "theme": {
+    "accent": "#3fa7c9",
+    "accentDark": "#1d6077"
+  }
+}

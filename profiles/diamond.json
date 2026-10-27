@@ -1,0 +1,52 @@
+{
+  "id": "diamond",
+  "name": "Pokémon Diamante",
+  "shortName": "Diamante",
+  "platform": "Nintendo DS",
+  "group": "Sinnoh",
+  "order": 40,
+  "notes": "Pokémon Diamante original (Generación IV). No es Diamante Brillante / Perla Reluciente.",
+  "generation": 4,
+  "versionGroup": "diamond-pearl",
+  "textVersion": "diamond",
+  "regionalPokedex": {
+    "name": "original-sinnoh",
+    "label": "Pokédex de Sinnoh (Diamante/Perla, 151)",
+    "short": "Sinnoh"
+  },
+  "nationalDex": {
+    "maxSpecies": 493,
+    "label": "Pokédex Nacional (hasta Gen. IV: 493 especies)"
+  },
+  "sprites": {
+    "game": [
+      {
+        "path": "versions.generation-iv.diamond-pearl.front_default",
+        "label": "Diamante/Perla (Nintendo DS)"
+      }
+    ],
+    "animated": [
+      {
+        "path": "versions.generation-iv.diamond-pearl.animated.front_default",
+        "label": "Animación de Diamante/Perla (DS)",
+        "animated": true
+      },
+      {
+        "path": "versions.generation-v.black-white.animated.front_default",
+        "label": "Animación pixel art de Negro/Blanco (no es de Diamante)",
+        "fromOtherGame": true,
+        "animated": true
+      }
+    ],
+    "family": [
+      {
+        "path": "versions.generation-iv.diamond-pearl.front_default",
+        "label": "Diamante/Perla (Nintendo DS)"
+      }
+    ]
+  },
+  "theme": {
+    "accent": "#4f7fd6",
+    "accentDark": "#24447f"
+  }
+}

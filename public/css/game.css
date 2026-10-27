@@ -1,0 +1,507 @@
+/* Overlays de la partida (equipo, medallas, mochila, PC y mapa) y sus vistas en el panel.
+   Los gráficos son los originales de Esmeralda (servidos en /gba/…), siempre con píxel nítido. */
+
+.gm-frame {
+  --accent: #1f9d63;
+  --accent-dark: #0d5c38;
+  --screen: #e8f0d8;
+  --screen-ink: #1d2b1a;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border-radius: 14px 14px 14px 30px;
+  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-dark) 100%);
+  border: 4px solid var(--frame-border, #141416);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.25),
+    0 4px 12px rgba(0, 0, 0, 0.45);
+  color: var(--frame-text, #fff);
+  font-family: 'VT323', 'Consolas', monospace;
+}
+.gm-frame *,
+.gm-frame *::before,
+.gm-frame *::after {
+  box-sizing: border-box;
+}
+.gm-title {
+  margin: 0 0 8px;
+  font-family: 'Silkscreen', monospace;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--title, #ffe9a8);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.45);
+}
+.gm-frame img,
+.gm-pc img,
+.gm-map img {
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Equipo: Poké Ball de captura · datos · sprite */
+.gm-party {
+  --sprite-scale: 1;
+  --text-size: 20px;
+  --sprite: calc(64px * var(--sprite-scale));
+  --slot-w: calc(var(--sprite) + 48px + var(--text-size) * 9.5);
+  display: grid;
+  gap: 6px;
+}
+.gm-party.layout-vertical {
+  grid-template-columns: var(--slot-w);
+}
+.gm-party.layout-grid {
+  grid-template-columns: repeat(2, var(--slot-w));
+}
+.gm-party.layout-horizontal {
+  grid-template-columns: repeat(6, max(128px, calc(var(--sprite) + 32px)));
+}
+/* Sprite a la izquierda: la Poké Ball pasa al otro lado (arriba/abajo en horizontal) */
+.gm-party.sprite-left .gm-mon {
+  flex-direction: row-reverse;
+}
+.gm-party.layout-horizontal.sprite-left .gm-mon {
+  flex-direction: column-reverse;
+}
+.gm-party.no-ball .gm-ball {
+  display: none;
+}
+.gm-mon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 4px 2px 8px;
+  background: var(--screen);
+  color: var(--screen-ink);
+  border: 3px solid #2a2a2e;
+  border-radius: 8px;
+}
+.layout-horizontal .gm-mon {
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px 4px 2px;
+  text-align: center;
+}
+.gm-ball {
+  flex: none;
+  width: 48px;
+  height: 48px;
+}
+.gm-ball-img {
+  width: 48px;
+  height: 48px;
+}
+.gm-data {
+  flex: 1;
+  min-width: 0;
+}
+.layout-horizontal .gm-data {
+  width: 100%;
+  flex: none;
+}
+.gm-name {
+  font-size: var(--text-size, 20px);
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.gm-star {
+  color: #e2a400;
+  margin-right: 2px;
+}
+.gm-line {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 2px 0 3px;
+  font-size: calc(var(--text-size, 20px) * 0.85);
+  line-height: 1;
+}
+.layout-horizontal .gm-line {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.gm-hp-text {
+  margin-left: auto;
+  opacity: 0.8;
+}
+.layout-horizontal .gm-hp-text {
+  margin-left: 0;
+}
+.gm-status {
+  font-family: 'Silkscreen', monospace;
+  font-size: 9px;
+  line-height: 1;
+  padding: 2px 3px;
+  border-radius: 3px;
+  color: #fff;
+  background: #6b6b6b;
+}
+.gm-status.s-DOR { background: #8c8c8c; }
+.gm-status.s-ENV,
+.gm-status.s-GRA { background: #a040a0; }
+.gm-status.s-QUE { background: #e2572e; }
+.gm-status.s-CON { background: #4aa8d8; }
+.gm-status.s-PAR { background: #c8a400; }
+.gm-status.s-DEB { background: #c02020; }
+.gm-hp {
+  height: 6px;
+  border: 1px solid #2a2a2e;
+  border-radius: 3px;
+  background: #4a4a4a;
+  overflow: hidden;
+}
+.gm-hp-fill {
+  height: 100%;
+  transition: width 400ms ease;
+}
+.gm-hp-fill.high { background: #48d048; }
+.gm-hp-fill.mid { background: #f8c030; }
+.gm-hp-fill.low { background: #f05838; }
+.gm-sprite {
+  flex: none;
+  width: var(--sprite, 64px);
+  height: var(--sprite, 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gm-sprite img {
+  width: var(--sprite, 64px);
+  height: var(--sprite, 64px);
+}
+.gm-mon.fainted .gm-sprite img {
+  filter: grayscale(1) brightness(0.8);
+  opacity: 0.7;
+}
+.gm-egg {
+  width: 26px;
+  height: 34px;
+  border-radius: 50% 50% 46% 46% / 60% 60% 40% 40%;
+  background: radial-gradient(circle at 35% 30%, #fffef0 0 30%, #e8dcb0 70%);
+  border: 2px solid #2a2a2e;
+}
+.gm-missing {
+  font-family: 'Silkscreen', monospace;
+  font-size: 20px;
+  opacity: 0.4;
+}
+
+/* Medallas: sprites de la tarjeta de entrenador de Esmeralda */
+.gm-badges {
+  --badge-cols: 8;
+  --badge-size: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+.gm-badges-title {
+  font-family: 'Silkscreen', monospace;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--title, #ffe9a8);
+  white-space: nowrap;
+}
+.gm-badge-row {
+  display: grid;
+  grid-template-columns: repeat(var(--badge-cols), auto);
+  gap: 8px;
+}
+.gm-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+.gm-badge-img {
+  width: var(--badge-size);
+  height: var(--badge-size);
+}
+/* Las que faltan: silueta oscura */
+.gm-badge:not(.owned) .gm-badge-img {
+  filter: brightness(0);
+  opacity: 0.35;
+}
+.gm-badge-name {
+  font-size: 15px;
+  line-height: 1;
+  opacity: 0.55;
+}
+.gm-badge.owned .gm-badge-name {
+  opacity: 1;
+}
+.gm-badges.named .gm-badge-row {
+  gap: 10px 12px;
+}
+
+/* Mochila: la mochila original abierta por el bolsillo, y la lista de objetos */
+.gm-pocket {
+  --bag-size: 128px;
+  --icon-size: 24px;
+  --text-size: 20px;
+  --cols: 2;
+  --rows: 6;
+  --row-h: max(var(--icon-size), var(--text-size));
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+/* Lista a la izquierda, derecha, arriba o abajo de la mochila */
+.gm-pocket.list-left {
+  flex-direction: row-reverse;
+}
+.gm-pocket.list-top {
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.gm-pocket.list-bottom {
+  flex-direction: column;
+  align-items: center;
+}
+.gm-bag {
+  flex: none;
+  width: var(--bag-size);
+  height: var(--bag-size);
+}
+.gm-bag-img {
+  width: var(--bag-size);
+  height: var(--bag-size);
+}
+.gm-items-window {
+  flex: none;
+  width: calc(var(--cols) * (var(--icon-size) + var(--text-size) * 9) + (var(--cols) - 1) * 12px + 26px);
+  padding: 8px 10px;
+  background: var(--screen);
+  color: var(--screen-ink);
+  border: 3px solid #2a2a2e;
+  border-radius: 8px;
+  overflow: hidden;
+}
+/* Con desplazamiento, la ventana enseña `rows` filas y la lista se mueve dentro */
+.gm-items-window.scrolling {
+  height: calc(var(--rows) * var(--row-h) + (var(--rows) - 1) * 3px + 22px);
+}
+.gm-items {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  gap: 3px 12px;
+  will-change: transform;
+}
+.gm-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  min-height: var(--row-h);
+  font-size: var(--text-size);
+  line-height: 1;
+}
+.gm-item-icon {
+  flex: none;
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+.gm-item-icon img {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+.gm-item-name {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.gm-item-qty {
+  flex: none;
+}
+.gm-empty {
+  margin: 0;
+  align-self: center;
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+/* Caja del PC en el panel: cuadrícula con niveles */
+.gm-box {
+  display: grid;
+  grid-template-columns: repeat(6, 64px);
+  gap: 4px;
+  padding: 8px;
+  background: var(--screen);
+  border: 3px solid #2a2a2e;
+  border-radius: 8px;
+}
+.gm-cell {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: rgba(29, 43, 26, 0.08);
+}
+.gm-cell.empty {
+  background: rgba(29, 43, 26, 0.04);
+}
+.gm-cell.shiny {
+  box-shadow: inset 0 0 0 2px #e2a400;
+}
+.gm-cell-sprite img {
+  width: 64px;
+  height: 64px;
+}
+.gm-cell-level {
+  position: absolute;
+  right: 3px;
+  bottom: 1px;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--screen-ink);
+}
+
+/* Caja del PC en el directo: fondo original de la caja y Pokémon rebotando */
+.gm-pc {
+  --pc-scale: 3;
+  position: relative;
+  width: calc(160px * var(--pc-scale));
+  height: calc(144px * var(--pc-scale));
+}
+.gm-pc-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.gm-pc-name {
+  /* Barra superior del fondo: casillas 2–17 de las filas 0–2 */
+  position: absolute;
+  left: calc(16px * var(--pc-scale));
+  top: 0;
+  width: calc(128px * var(--pc-scale));
+  height: calc(24px * var(--pc-scale));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Silkscreen', monospace;
+  font-size: calc(8.7px * var(--pc-scale));
+  color: var(--frame-text, #fff);
+  text-shadow: 2px 2px 0 #383838;
+  white-space: nowrap;
+}
+.gm-pc-area {
+  position: absolute;
+  overflow: hidden;
+}
+.gm-pc-mon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 64px;
+  height: 64px;
+  will-change: transform;
+  filter: drop-shadow(0 3px 2px rgba(0, 0, 0, 0.35));
+}
+.gm-pc-mon img {
+  width: 64px;
+  height: 64px;
+}
+/* Los sprites miran a la izquierda: al ir hacia la derecha se voltean */
+.gm-pc-mon.flip img {
+  transform: scaleX(-1);
+}
+.gm-pc-mon .gm-missing {
+  display: none;
+}
+.gm-pc-mon .gm-egg {
+  margin: 15px 19px;
+}
+
+/* Minimapa: mapa original de Hoenn con la cara del personaje y el nombre de la zona */
+.gm-map {
+  --map-scale: 2;
+  position: relative;
+  width: calc(240px * var(--map-scale));
+  height: calc(160px * var(--map-scale));
+}
+.gm-map-img {
+  width: 100%;
+  height: 100%;
+}
+.gm-marker {
+  position: absolute;
+  width: 0;
+  height: 0;
+  transition:
+    left 500ms linear,
+    top 500ms linear;
+}
+.gm-face {
+  position: absolute;
+  left: calc(-8px * var(--map-scale));
+  top: calc(-8px * var(--map-scale));
+  width: calc(16px * var(--map-scale));
+  height: calc(16px * var(--map-scale));
+}
+.gm-map-place {
+  margin: 8px auto 0;
+  width: max-content;
+  max-width: 100%;
+  padding: 6px 14px 7px;
+  border-radius: 6px;
+  border: 3px solid var(--frame-border, #141416);
+  background: var(--screen, #f8f8f8);
+  color: var(--screen-ink, #303030);
+  font-family: 'Silkscreen', monospace;
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15);
+}
+.gm-map-place:empty {
+  display: none;
+}
+.label-top .gm-map-place {
+  margin: 0 auto 8px;
+}
+
+/* Alineación de los textos (Diseño del directo → Textos) */
+.gm-party.text-center .gm-data {
+  text-align: center;
+}
+.gm-party.text-right .gm-data {
+  text-align: right;
+}
+.gm-party.text-center .gm-line {
+  justify-content: center;
+}
+.gm-party.text-right .gm-line {
+  justify-content: flex-end;
+}
+.gm-party:not(.text-left) .gm-hp-text {
+  margin-left: 0;
+}
+.gm-pc-name.align-left {
+  justify-content: flex-start;
+  padding-left: calc(4px * var(--pc-scale));
+}
+.gm-pc-name.align-right {
+  justify-content: flex-end;
+  padding-right: calc(4px * var(--pc-scale));
+}
+.label-align-left .gm-map-place {
+  margin-left: 0;
+}
+.label-align-right .gm-map-place {
+  margin-right: 0;
+}
+.gm-pc-name {
+  box-sizing: border-box;
+}

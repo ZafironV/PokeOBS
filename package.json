@@ -1,0 +1,80 @@
+{
+  "name": "pokeobs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pokédex visual local para OBS Studio (panel de control + overlay transparente).",
+  "author": "PokeOBS",
+  "main": "electron/main.cjs",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node scripts/build.mjs --watch",
+    "build": "node scripts/build.mjs",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "visual-check": "node scripts/visual-check.mjs",
+    "fixtures": "node scripts/fetch-fixtures.mjs",
+    "app": "node scripts/build.mjs && electron .",
+    "msi": "node scripts/build.mjs && electron-builder --win msi --publish never"
+  },
+  "dependencies": {
+    "@fontsource/silkscreen": "^5.3.0",
+    "@fontsource/vt323": "^5.3.0",
+    "pngjs": "^7.0.0",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/pngjs": "^6.0.5",
+    "@types/ws": "^8.18.2",
+    "electron": "^45.0.0",
+    "electron-builder": "^26.18.0",
+    "esbuild": "^0.28.2",
+    "playwright-core": "^1.64.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  },
+  "build": {
+    "appId": "com.pokeobs.app",
+    "productName": "PokeOBS",
+    "asar": false,
+    "electronLanguages": [
+      "es",
+      "es-419",
+      "en-US"
+    ],
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "package.json",
+      "electron/**",
+      "dist/**",
+      "!dist/**/*.map",
+      "profiles/**",
+      "texts/**",
+      "scripts/firewall-guard.ps1",
+      "build/icon.png"
+    ],
+    "win": {
+      "target": "msi",
+      "icon": "build/icon.png"
+    },
+    "msi": {
+      "oneClick": true,
+      "perMachine": false,
+      "runAfterFinish": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "PokeOBS",
+      "upgradeCode": "2E5D7A9D-5FD2-4131-A4F4-32F4F02359C3",
+      "artifactName": "PokeOBS-${version}.msi"
+    },
+    "publish": null
+  }
+}
